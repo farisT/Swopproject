@@ -1,1 +1,108 @@
-nav.pug
+html
+	head
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+		link(rel="stylesheet" type="text/css" href="customSwop.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(charset="utf-8")
+			
+	body
+
+		nav
+			
+			if(username)
+				ul.navul
+					li.navIMG
+						a(href='/')
+							img.logo(src="/images/swoplogo.png")
+					li.navli#FLOATRIGHT
+						a.navA(href='logout') Logout	
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Favorites
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Shoppingbag
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') How it works
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') About
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Swop men
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Swop women
+			else
+				ul.navul
+					li.navli
+						a.navA(href='/')
+							img.logo(src="images/swoplogo.png")
+					li.navli#FLOATRIGHT
+						a.navA(href='login') Login
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Sign up
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') How it works
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') About
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Swop men
+					li.navli#FLOATRIGHT
+						a.navA(href='signup') Swop women
+
+
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+		
+
+
+		style.
+			@import "http://fonts.googleapis.com/css?family=Ubuntu";
+
+			ul.navul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #FFF;
+			height: 150px;
+			}
+
+			.navli{
+			float: left;
+			position: relative;
+			top: 25%;
+			}
+
+			.navA {
+			display: block;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family:'Ubuntu',sans-serif;
+			text-align:center;
+			font-size: 20px;
+
+			}
+
+			.navIMG {
+			display: block;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-family:'Ubuntu',sans-serif;
+			text-align:center;
+			font-size: 20px;
+			margin-top: 0px;
+			}
+
+			/* Change the link color to #111 (black) on hover */
+			.navA:hover {
+			background-color: #87A08B;
+			}
+
+			#FLOATRIGHT{
+			float: right;
+			}
+
+			.logo {
+			height: 100px;
+			width: auto;
+			margin-top: 0;
+			}
