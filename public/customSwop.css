@@ -7,7 +7,6 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: red;
 }
 
 /* NAVIGATION BAR*/
@@ -78,3 +77,163 @@ body{
 height: 3%;
 width: auto;
 }
+
+/* this is  index  page CSS*/
+
+
+
+.carousel-indicators {
+	margin-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+.carousel-indicators li {
+
+
+	border: solid 2px grey;
+	padding: 5px;
+}
+
+
+.carousel-inner > .item > img {
+
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#icons {
+
+	width: 50%;
+
+}
+
+.greenblock {
+
+	background-color: #5C715F;
+    height: 150px;
+    width: 100%;
+   	text-align: center;
+}
+
+.greenblockfooter {
+
+	background-color: #5C715F;
+    height: 240px;
+    width: 100%;
+
+}
+
+.btn-default {
+	font-family: Helvetica;
+	font-size:18px;
+	color:  #5C715F;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px ;
+	padding-bottom: 10px;
+	border-color: white;
+
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #5C715F;
+    border-color: #5C715F;
+}
+
+.white {
+	font-family: Helvetica;
+	font-size:25px;
+	color:  white;
+	padding-top: 30px;
+
+
+}
+
+
+.unstyled {
+
+	margin-top: 0;
+    float: left;
+    display: inline-table;
+    list-style: none;
+    font-size: 18px;
+    font-family: Helvetica;
+    color: white;
+    padding-left: 90px;
+
+}
+
+
+
+.unstyled li a{
+
+	 text-decoration: none;
+	 color: white;
+}
+
+.span2 {
+
+    margin-left: 120px;
+    padding-top: 40px;
+
+
+}
+
+/*.content button {
+
+	position: absolute;
+}
+*/
+
+.img-wrapper {
+  position: relative;
+ }
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.img-overlay button {
+
+    margin-right: 185px;
+    margin-left: 140px;
+  	padding-left: 50px;
+  	padding-right: 50px;
+
+}
+
+
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 50%;
+}
+
+
+#menwomen {
+
+	width: 80%;
+    position:relative;
+}
+
+
+
+
+
+/**/
+
+
+
+
+

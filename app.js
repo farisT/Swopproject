@@ -47,8 +47,11 @@ require("./routes/login.js")(app)
 
 
 
-
-app.listen(process.env.webport, ()=>{
-	console.log('Running on', process.env.webport)
+app.listen(3000, () => {
+    console.log("listening to 3000")
 })
+
+// app.listen(process.env.webport, ()=>{
+// 	console.log('Running on', process.env.webport)
+// })
 
