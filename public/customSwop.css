@@ -1,4 +1,80 @@
+/* FONTS TO INCLUDE*/
+@import "http://fonts.googleapis.com/css?family=Ubuntu";
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
+
+/* GENERAL CSS*/
 body{
-    padding: 0px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: red;
+}
+
+/* NAVIGATION BAR*/
+.container{
+	padding: 0px;
     margin: 0px;
+    width: 100%;
+}
+
+.navbar{
+	height: 150px;
+	background-color: white;
+}
+
+.collapse navbar-collapse{
+	background-color: white;
+	vertical-align: middle;
+}
+
+.navbar-right{
+	position: relative;
+	top: 35%;
+	margin-right: 10px;
+	float: right;
+	
+}
+.container-fluid{
+	margin-top: 50px;
+}
+.navA{
+	margin-right: 25px;
+	text-align: center;
+	margin-right: 20px;
+	font-family: Helvetica;
+	color: #5F5F5F;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+#howitworks{
+	border: solid 1px #5F5F5F;
+}
+
+#signupnav{
+	background-color: #5C715F;
+	color: white;
+	border: solid 1px #5F5F5F;
+}
+
+#logo{
+	height: 100px;
+	width: auto;
+	vertical-align: middle;
+	margin-top: -40px;
+	margin-left: 20px;
+}
+
+#dropdownnavbarSWOP{
+	background-color: white;
+	margin: 0 auto;
+}
+.glyphicon {
+	height: 50%;
+	width: auto;
+}
+
+.heart {
+height: 3%;
+width: auto;
 }

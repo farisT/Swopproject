@@ -7,6 +7,7 @@ const Client = pg.Client
 const bcrypt = require('bcrypt')
 const path = require('path')
 
+
 require ('dotenv').load();
 app.set("view engine", "pug")
 
@@ -34,11 +35,17 @@ app.use(session(sess))
 // ROUTES 
 require("./routes/index.js")(app) 
 
-// require("./routes/XXXXX.js")(app)
-// require("./routes/XXXXX.js")(app, client, bcrypt)
+require("./routes/swopmen.js")(app)
+require("./routes/swopwomen.js")(app)
 
-// require("./routes/XXXXX.js")(app)
-// require("./routes/XXXXXX.js")(app, client, bcrypt)
+require("./routes/aboutswop.js")(app)
+require("./routes/howitworks.js")(app)
+
+require("./routes/signup.js")(app)
+require("./routes/login.js")(app)
+
+
+
 
 
 app.listen(process.env.webport, ()=>{

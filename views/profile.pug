@@ -5,8 +5,9 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(charset="utf-8")
 			
-	body(id="swopmenPage")
+	body(id="profilePage")
 		include nav
+
 
 
 
@@ -15,17 +16,3 @@ html
 	
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
-	script.
-		$(document).ready(function() {
-	//highlight the current nav
-			$("#swopwomenPage a:contains('Swop women')").parent().addClass('active');
-			$("#swopmenPage a:contains('Swop men')").parent().addClass('active');
-			$("#aboutPage a:contains('About')").parent().addClass('active');
-			$("#howitworksPage a:contains('How it works')").parent().addClass('active');
-			$("#signupPage a:contains('Sign up')").parent().addClass('active');
-			$("#loginPage a:contains('Login')").parent().addClass('active');
-			$("#logoutPage a:contains('Logout')").parent().addClass('active');
-
-			$("#uploaditemPage a:contains('Add item')").parent().addClass('active');
-		}); //jQuery is loaded
-

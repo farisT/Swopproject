@@ -6,103 +6,77 @@ html
 		meta(charset="utf-8")
 			
 	body
+		div(class="container")
+			nav(class="navbar navbar-default navbar-fixed-top" role="navigation")
+				div(class="container-fluid")
+					a(class="navbar-brand" href="/")
+						img#logo(src="/images/navbar/swoplogo.png")
 
-		nav
-			
-			if(username)
-				ul.navul
-					li.navIMG
-						a(href='/')
-							img.logo(src="/images/swoplogo.png")
-					li.navli#FLOATRIGHT
-						a.navA(href='logout') Logout	
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Favorites
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Shoppingbag
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') How it works
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') About
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Swop men
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Swop women
-			else
-				ul.navul
-					li.navli
-						a.navA(href='/')
-							img.logo(src="images/swoplogo.png")
-					li.navli#FLOATRIGHT
-						a.navA(href='login') Login
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Sign up
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') How it works
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') About
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Swop men
-					li.navli#FLOATRIGHT
-						a.navA(href='signup') Swop women
+					if(false)
+						ul(class="nav navbar-nav navbar-right")
+							li
+								a(class="navA" href="/swopwomen") Swop woman 
+							li
+								a(class="navA" href="/swopmen") Swop men
+							li
+								a(class="navA" href="/aboutswop") About
+							li
+								a(class="navA" id="howitworks" href="/howitworks") How it works
+							li
+								a(class="navA" href="/logout") Logout
+							
+					else
+						ul(class="nav navbar-nav navbar-right")
+							li
+								a(class="navA" href="/swopwomen") Swop woman 
+							li
+								a(class="navA" href="/swopmen") Swop men
+							li
+								a(class="navA" href="/aboutswop") About
+							li
+								a(class="navA" id="howitworks" href="/howitworks") How it works
+							li
+								a(class="navA" id="signupnav" href="/signup") Sign up
+							li
+								a(class="navA" href="/login") Login
 
 
-		script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
-		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+
+	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+	script.
+		// NAVBAR FOR COMPATIBILITY (IF WE HAVE SPARE TIME)
+		// under div container-fluid
+		/* div(class="navbar-header")
+						button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropdownnavbarSWOP")
+						span(class="sr-only") Toggle Navigation
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+							*/
+
+		// then logo (brand thing)
+		//hen following to let dropdown know what to include 
+		// div(class="collapse navbar-collapse" id="dropdownnavbarSWOP")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		
 
 
-		style.
-			@import "http://fonts.googleapis.com/css?family=Ubuntu";
-
-			ul.navul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #FFF;
-			height: 150px;
-			}
-
-			.navli{
-			float: left;
-			position: relative;
-			top: 25%;
-			}
-
-			.navA {
-			display: block;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-family:'Ubuntu',sans-serif;
-			text-align:center;
-			font-size: 20px;
-
-			}
-
-			.navIMG {
-			display: block;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-family:'Ubuntu',sans-serif;
-			text-align:center;
-			font-size: 20px;
-			margin-top: 0px;
-			}
-
-			/* Change the link color to #111 (black) on hover */
-			.navA:hover {
-			background-color: #87A08B;
-			}
-
-			#FLOATRIGHT{
-			float: right;
-			}
-
-			.logo {
-			height: 100px;
-			width: auto;
-			margin-top: 0;
-			}
+		
