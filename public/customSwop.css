@@ -145,7 +145,7 @@ width: auto;
 
 }
 
-/* this is  index  page CSS*/
+/* INDEX PAGE CSS*/
 
 
 
@@ -250,11 +250,6 @@ width: auto;
 
 }
 
-/*.content button {
-
-	position: absolute;
-}
-*/
 
 .img-wrapper {
   position: relative;
@@ -298,7 +293,23 @@ width: auto;
 
 
 
-/**/
+/*FOOTER*/
+
+.logos {
+
+	padding-left: 20px;
+
+}
+
+.logowrap {
+
+	padding-top: 10px;
+}
+
+.logowrap img {
+
+	width: 20%;
+}
 
 
 
