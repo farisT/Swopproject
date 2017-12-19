@@ -65,34 +65,9 @@ html
 				div.img-overlay
 					button(type="button" class="btn btn-default" id="imagebutton") Swop Women
 					button(type="button" class="btn btn-default" id="imagebutton") Swop Men
-		br
-		br
-		br
+		
 
-		footer.greenblockfooter
-				.row-fluid
-						.span2
-							ul.unstyled
-								li
-									a(href='#') Swop Women
-								li
-									a(href='#') Swop Men
-							ul.unstyled
-
-								li
-									a(href='#') About
-								li
-									a(href='#') How it works
-								li
-									a(href='#') Contact
-								li
-									a(href='#') Terms and Conditions
-							ul.unstyled
-								li
-									a(href='#') Follow
-
-								li
-									a SOCIAL MEDIA ICONS HERE
+		include footer
 
 
 
@@ -101,7 +76,7 @@ html
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
 	script.
 		$(document).ready(function() {
-	//highlight the current nav
+	//highlight the current nav // NOT WORKING YET 
 			$("#swopwomenPage a:contains('Swop women')").parent().addClass("active");
 			$("#swopmenPage a:contains('Swop men')").parent().addClass("active");
 			$("#aboutPage a:contains('About')").parent().addClass("active");
