@@ -41,6 +41,7 @@ require("./routes/swopwomen.js")(app)
 require("./routes/aboutswop.js")(app)
 require("./routes/howitworks.js")(app)
 
+require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app)
 require("./routes/login.js")(app)
 
