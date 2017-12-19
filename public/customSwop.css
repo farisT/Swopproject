@@ -6,11 +6,46 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: red;
+}
+
+.titleFont{
+	font-family: Helvetica;
+	font-size: 26px;
+	color: #5F5F5F;
+	font-weight: 500;
+}
+
+.form-control::-moz-placeholder {
+  color: #C7C7C7;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #C7C7C7;
+}
+.form-control::-webkit-input-placeholder {
+  color: #C7C7C7;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.submitelement{
+	background-color: #5C715F;
+	color: white;
+	border: solid 1px #5F5F5F;
+	height: 50px;
+	width: 125px;
+	font-family: Helvetica;
+	font-size: 22px;
+
 }
 
 /* NAVIGATION BAR*/
+.navbarspacing{
+	height: 150px;
+}
+
 .container{
 	padding: 0px;
     margin: 0px;
@@ -78,3 +113,249 @@ body{
 height: 3%;
 width: auto;
 }
+
+
+/* INDEX PAGE*/
+.carousel-indicators {
+	margin-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.carousel-indicators li {
+	border: solid 2px grey;
+	padding: 5px;
+}
+
+.carousel-inner > .item > img {
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#icons {
+	width: 50%;
+}
+
+.greenblock {
+	background-color: #5C715F;
+    height: 150px;
+    width: 100%;
+   	text-align: center;
+}
+
+.greenblockfooter {
+	background-color: #5C715F;
+    height: 240px;
+    width: 100%;
+}
+
+.btn-default {
+	font-family: Helvetica;
+	font-size:18px;
+	color:  #5C715F;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px ;
+	padding-bottom: 10px;
+	border-color: white;
+
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #5C715F;
+    border-color: #5C715F;
+}
+
+.white {
+	font-family: Helvetica;
+	font-size:25px;
+	color:  white;
+	padding-top: 30px;
+}
+
+
+.unstyled {
+	margin-top: 0;
+    float: left;
+    display: inline-table;
+    list-style: none;
+    font-size: 18px;
+    font-family: Helvetica;
+    color: white;
+    padding-left: 90px;
+}
+
+.unstyled li a{
+	 text-decoration: none;
+	 color: white;
+}
+
+.span2 {
+margin-left: 120px;
+padding-top: 40px;
+}
+
+.img-wrapper {
+	position: relative;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.img-overlay button {
+
+    margin-right: 185px;
+    margin-left: 140px;
+  	padding-left: 50px;
+  	padding-right: 50px;
+
+}
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 50%;
+}
+
+#menwomen {
+	width: 80%;
+    position:relative;
+}
+
+/* SIGN IN PAGE */
+#signinpic{
+	height: 650px;
+}
+
+.signupDiv{
+	padding: 50px;
+}
+
+.form-control{
+	margin: 15px;
+	margin-left: 0px;
+	margin-right: 5px;
+	font-family: Helvetica;
+	color: #C7C7C7;
+
+}
+
+#checkboxsignin{
+	
+	border: 0;
+	border-style: none;
+	box-shadow: none;
+	margin-top: 15px;
+	
+}
+
+#labelCheckbox{
+	border-style: none;
+	box-shadow: none;
+	text-align: right;
+	margin-top: 23px;
+	margin-right: 0px;
+	display: inline-block;
+	font-family: Helvetica;
+	color: #C7C7C7;
+	font-size: 10px;
+	
+
+}
+
+
+/* SIGN IN PAGE */
+#signinpic{
+	height: 650px;
+}
+
+.signupDiv{
+	padding: 50px;
+}
+
+.form-control{
+	margin: 15px;
+	margin-left: 0px;
+	margin-right: 5px;
+	font-family: Helvetica;
+	color: #C7C7C7;
+
+}
+
+#checkboxsignin{
+	border: 0;
+	border-style: none;
+	box-shadow: none;
+	margin-top: 15px;
+	
+}
+
+#labelCheckbox{
+	border-style: none;
+	box-shadow: none;
+	text-align: right;
+	margin-top: 23px;
+	margin-right: 0px;
+	display: inline-block;
+	font-family: Helvetica;
+	color: #C7C7C7;
+	font-size: 10px;
+}
+
+#submitSignup{
+	margin-top: 15px;
+	float: right;
+}
+
+/* LOGIN PAGE */
+.backgroundLogin { 
+	position: relative;
+}
+
+.theForm {
+	position: absolute;
+	top: 25%;
+	left: 55%; 
+}
+
+#submitLogin{
+	margin-top: 40%;
+	margin-left: 70%;
+}
+
+
+
+
+/*FOOTER*/
+
+.logos {
+	padding-left: 20px;
+}
+
+.logowrap {
+	padding-top: 10px;
+}
+
+.logowrap img {
+	width: 20%;
+}
+
+.copyright img {
+	float: right;
+	width: 80%;
+	padding-left: 250px;
+	padding-top: 50px;
+}
+
+
+
+
+
