@@ -311,6 +311,13 @@ width: auto;
 	width: 20%;
 }
 
+.copyright img {
+	float: right;
+	width: 80%;
+	padding-left: 250px;
+	padding-top: 50px;
+}
+
 
 
 
