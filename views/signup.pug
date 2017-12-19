@@ -13,9 +13,10 @@ html
 				div(class="col-sm-6 col-sm-offset-1")
 					img#signinpic(src="/images/signup/signinpic.png")
 				div(class="col-sm-4 signupDiv")
+					br
 					h4(class="titleFont") Become a swopper!
 					br
-					form(class="input-group input-group-sm")
+					form(class="input-group input-group-sm" )
 						input(class="form-control" type="text" placeholder="First name*" required)
 						input(class="form-control" type="text" placeholder="Last name*" required)
 						input(class="form-control" type="text" placeholder="Email*" required)
@@ -35,7 +36,7 @@ html
 							div(class="col-sm-4 input-group-sm")
 								p(class="form-control") Date of Birth
 							div(class="col-sm-8 input-group-sm")
-								input(class="form-control" type="date" placeholder="Date of Birth DD/MM/YY" required)
+								input(class="form-control" type="date" required)
 						input(class="form-control" type="password" placeholder="Password*" required)
 						input(class="form-control" type="password" placeholder="Confirm password*" required)
 						div(class="row")
@@ -43,6 +44,7 @@ html
 								input(class="form-control" id="checkboxSignin" type="checkbox" value="")
 							div(class="col-sm-6 input-group-sm")
 								label(id="labelCheckbox") Agree to our #[a(href='#') Terms and Conditions]
+						input(class="submitelement" id="submitSignup" type="submit" value="Next >")
 
 					
 		include footer				
