@@ -38,7 +38,7 @@ require("./routes/subscription.js")(app)
 require("./routes/profilepage.js")(app)
 
 db.sequelize.sync({ 
-    force: false,
+    force: true, // CHANGE THIS WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
     logging: console.log 
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
