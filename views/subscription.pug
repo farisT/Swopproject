@@ -1,0 +1,73 @@
+html
+	head
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+		link(rel="stylesheet" type="text/css" href="customSwop.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(charset="utf-8")
+			
+	body(id="signupPage")
+		include nav
+		div(class="navbarspacing")
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-5 col-sm-offset-1")
+					img#subscripImg(src="/images/signup/signinpic.png")
+				div(class="subscripDiv col-sm-4 col-sm-offset-1")
+					br
+					h4(class="titleFont" id="titleSubscrip") Select your subscription
+					br
+					div(class="row")
+						div(class="subscripColumn col-sm-4")
+							br
+							img.subscripOptionpic(src="/images/signup/subscription1.png")
+							h3(class="subscripTitle") Simple Swopper
+							p(class="subscripPrice") €10 / m
+							p(class="subscripText") Swop your items and earn Swop-credit
+							p(class="subscripText") Borrow with your Swop-credit
+							p(class="subscripText") Prepaid Swop-credit available
+							p(class="subscripText") 
+							br
+							br
+							br
+
+
+						div(class="subscripColumn col-sm-4" id="selectedSubscription")
+							br
+							img.subscripOptionpic(src="/images/signup/subscription2.png")
+							h3(class="subscripTitle") Super Swopper
+							p(class="subscripPrice") €20 / m
+							p(class="subscripText") Standard 5 Swop-credits / m
+							p(class="subscripText") Swop your items and earn Swop-credit
+							p(class="subscripText") Borrow with your Swop-credit
+							p(class="subscripText") 10% discount on prepaid Swop-credit
+
+
+						div(class="subscripColumn col-sm-4")
+							br
+							img.subscripOptionpic(src="/images/signup/subscription2.png")
+							h3(class="subscripTitle") Swopaholic
+							p(class="subscripPrice") €25 / m
+							p(class="subscripText") Standard 10 Swop-credits / m
+							p(class="subscripText") Swop your items and earn Swop-credit
+							p(class="subscripText") Borrow with your Swop-credit
+							p(class="subscripText") 20% discount on prepaid Swop-credit
+					p(class="subscripLabel") To maintain the quality and style of the collection, we select Swop items to be put 			in the collection. Please read our full #[a(href='#') Terms and Conditions] for more information
+
+					input(class="submitelement" id="submitSubscrip" type="submit" value="Make profile >")
+
+					
+		include footer				
+								
+
+
+			
+	
+	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+	script.
+		$(document).ready(function(){
+			$(".subscripColumn").click(function(){
+				$(".subscripColumn").removeAttr("id")
+			})
+		})

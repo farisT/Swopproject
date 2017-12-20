@@ -8,13 +8,25 @@ body{
     margin: 0;
 }
 
-.titleFont{
+.spacer200 {
+height: 200px;
+}
+
+.spacer100 {
+height: 100px;
+}
+
+.titleFont, h3{
 	font-family: Helvetica;
 	font-size: 26px;
 	color: #5F5F5F;
 	font-weight: 500;
 }
 
+p{
+	font-family: Helvetica;
+	color: #5F5F5F;
+}
 .form-control::-moz-placeholder {
   color: #C7C7C7;
   opacity: 1;
@@ -161,6 +173,26 @@ width: auto;
 
 }
 
+#whitebutton{
+
+	font-family: Helvetica;
+	font-size:18px;
+	color:  #5C715F;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px ;
+	padding-bottom: 10px;
+	border-color: white;
+
+}
+
+#whitebutton:hover {
+
+	background-color: white;
+	border-color: white;
+
+}
+
 .btn-default:hover {
     color: white;
     background-color: #5C715F;
@@ -173,7 +205,6 @@ width: auto;
 	color:  white;
 	padding-top: 30px;
 }
-
 
 .unstyled {
 	margin-top: 0;
@@ -192,8 +223,8 @@ width: auto;
 }
 
 .span2 {
-margin-left: 120px;
-padding-top: 40px;
+	margin-left: 120px;
+	padding-top: 40px;
 }
 
 .img-wrapper {
@@ -209,13 +240,11 @@ padding-top: 40px;
   text-align: center;
 }
 
-.img-overlay button {
-
+.img-overlay a {
     margin-right: 185px;
     margin-left: 140px;
   	padding-left: 50px;
   	padding-right: 50px;
-
 }
 
 .img-overlay:before {
@@ -230,47 +259,70 @@ padding-top: 40px;
     position:relative;
 }
 
-/* SIGN IN PAGE */
-#signinpic{
+/* SUBSCRIPTION PAGE */ 
+#subscripImg{
 	height: 650px;
+	width: 100%;
 }
 
-.signupDiv{
-	padding: 50px;
+.subscripDiv{
+	margin-left: 50px;
+	padding-right: 0px;
 }
 
-.form-control{
-	margin: 15px;
-	margin-left: 0px;
-	margin-right: 5px;
+#titleSubscrip{
+	text-align: center;
+	font-weight: 500;
+}
+
+.subscripColumn{
+	padding: 0px 15px 0px 15px;
+}
+.subscripOptionpic{
+	height: 80px;
+	width: 100%;
+}
+
+.subscripTitle{
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+.subscripPrice{
+	font-size: 18px;
+	padding-top: 0px;
+	text-align: center;
+
+}
+.subscripText{
 	font-family: Helvetica;
-	color: #C7C7C7;
-
+	font-size: 12px;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
 }
 
-#checkboxsignin{
-	
-	border: 0;
-	border-style: none;
-	box-shadow: none;
-	margin-top: 15px;
-	
-}
-
-#labelCheckbox{
-	border-style: none;
-	box-shadow: none;
+.subscripLabel{
 	text-align: right;
-	margin-top: 23px;
+	margin-top: 18%;
 	margin-right: 0px;
-	display: inline-block;
+	/*display: inline-block;*/
 	font-family: Helvetica;
 	color: #C7C7C7;
 	font-size: 10px;
-	
-
+	width: 80%;
+	float:right;
 }
 
+#submitSubscrip{
+	margin-left: 70%;
+	width: auto;
+}
+
+#selectedSubscription{
+	border: solid 2px #5C715F;
+}
 
 /* SIGN IN PAGE */
 #signinpic{
@@ -287,7 +339,6 @@ padding-top: 40px;
 	margin-right: 5px;
 	font-family: Helvetica;
 	color: #C7C7C7;
-
 }
 
 #checkboxsignin{
@@ -295,7 +346,6 @@ padding-top: 40px;
 	border-style: none;
 	box-shadow: none;
 	margin-top: 15px;
-	
 }
 
 #labelCheckbox{
@@ -327,10 +377,17 @@ padding-top: 40px;
 }
 
 #submitLogin{
-	margin-top: 40%;
-	margin-left: 70%;
+	margin-top: 30%;
+	margin-left: 60%;
 }
 
+#loginEmail{
+	width: 300px;
+}
+
+#loginPassword{
+	width: 300px;
+}
 
 
 
@@ -351,9 +408,45 @@ padding-top: 40px;
 .copyright img {
 	float: right;
 	width: 80%;
-	padding-left: 250px;
+	padding-left: 325px;
 	padding-top: 50px;
 }
+
+.span2 {
+
+	margin-left: 50px;
+
+}
+
+
+/*ABOUT PAGE*/
+
+
+
+.row img {
+
+	width: 51%;
+	opacity:0.7;
+	padding-right: 20px;
+}
+
+div.row {
+
+	margin-left: 150px;
+	margin-right:150px;
+	background-color: #E8E8E8;
+}
+
+
+
+.clearfix.content-heading p {
+	padding-top: 10px;
+	padding-right: 20px;
+	font-size: 13px;
+}
+
+
+/*HOW IT WORKS*/
 
 
 

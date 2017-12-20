@@ -48,7 +48,7 @@ html
 		br
 		div.greenblock
 			p.white Become a Swopper
-			button(type="button" class="btn btn-default") Subscribe now
+			a(href="/signup" type="button" class="btn btn-default" id="whitebutton") Subscribe now
 
 		br
 		br
@@ -63,8 +63,8 @@ html
 		div.img-wrapper
 				img(src="/images/index/menwomen.png", alt='menwomen' class="center-block" id="menwomen")
 				div.img-overlay
-					button(type="button" class="btn btn-default" id="imagebutton") Swop Women
-					button(type="button" class="btn btn-default" id="imagebutton") Swop Men
+					a(href= "/swopwomen", type="button" class="btn btn-default" id="imagebutton" ) Swop Women
+					a(href="/swopmen", type="button" class="btn btn-default" id="imagebutton") Swop Men
 		
 
 		include footer
