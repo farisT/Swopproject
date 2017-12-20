@@ -22,13 +22,18 @@ app.use(session(sess))
 // ROUTES 
 
 require("./routes/index.js")(app, db) 
+
 require("./routes/swopmen.js")(app, db)
 require("./routes/swopwomen.js")(app, db)
+
 require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
+
+require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
 require("./routes/subscription.js")(app)
+
 db.sequelize.sync({ 
     force: false,
     logging: console.log 
@@ -36,6 +41,6 @@ db.sequelize.sync({
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
 
-})
+	})
 })
 

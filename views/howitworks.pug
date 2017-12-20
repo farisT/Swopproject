@@ -11,16 +11,45 @@ html
 		div.spacer200
 
 		.paragraphs
-			div.row
+			.rowHow
 				.span4
 					.clearfix.content-heading
 						img.pull-left(src="images/howitworks/howitworks.png" id="howitworksimg")
-						h3 How it Works
+						h3.howitworkstitle How it works
 						img.pull-right(src="images/howitworks/list.png" id="list")
 						p(id="underlisttext") We will take care of the hygiene and quality of the clothing collection we are borrowing, but always treat the items you borrow with respect! Damaged something? Don't worry, we will repair easy fixes and we dont consider wear as damage. Please read our policy about damaging and lost goods for more information.
 
-		.spacer200
+		div.spacer100
 
+		div(id="service")
+			img(src="/images/howitworks/ourservice.png", alt='Our Services' class="center-block" id="ourservices")
+
+		br
+		br
+
+		div.howitworkslist 
+			h3.center Get Started!
+			br
+
+			.row-fluid(id="rowHow")
+				ul.unstyled(id="hiwsteps")
+					li Step 1
+					li Step 2
+					li Step 3
+					li Step 4
+				ul(id="hiwtext")
+					li 
+						p Pick your subscription based on how much you want to borrow and how many pieces you would like to Swop yourself. You can end or change your subscription any time.
+					li
+						p.paraspace2 Make an account: fill out your details, payment and delivery preferences.
+					li 
+						p.paraspace Earn Credits by uploading your own items for Swop or purchase prepaid swop credit. To maintain quality and style in the collection, we select Swop items as sufficient based on a picture and item details. Your item will appear in the collection once its approved by us.
+					li 
+						p.paraspace Start Swopping and pay your borrows with your personal credit.
+
+
+		div.spacer200
+		div.spacer100
 
 		include footer
 

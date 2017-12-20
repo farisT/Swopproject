@@ -1,12 +1,13 @@
-module.exports = (sequelize, Sequelize) => {
-		var users = sequelize.define('clothes', { 
+module.exports = (sequelize, DataTypes) => {
+		var Clothes = sequelize.define('clothes', { 
 	    title: {
-	        type: Sequelize.STRING,
+	        type: DataTypes.STRING,
 	        unique: false,
 	        allowNull: false
 	    },
 	    body: {
-	        type: Sequelize.TEXT
-	    },
+	        type: DataTypes.TEXT
+	    }
 	})
+		return Clothes; 
 }
