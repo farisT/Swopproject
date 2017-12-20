@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize')
 var path = require('path')
 var env = require(path.resolve( __dirname, ".env.js" ))
-debugger
 const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {
   host: env.DATABASE_HOST,
   dialect: env.DATABASE_DIALECT,
@@ -19,12 +18,13 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //Models/tables
-db.users = require(path.resolve( __dirname, '../models/users.js'))(sequelize, Sequelize)
-db.clothes = require(path.resolve( __dirname, '../models/clothes.js'))(sequelize, Sequelize)
+debugger
+db.users = require('../models/users.js')(sequelize, Sequelize)
+db.clothes = require('../models/clothes.js')(sequelize, Sequelize)
 
 //Relations
-// db.clothes.belongsTo(db.users)
-// db.users.hasMany(db.clothes)
+db.clothes.belongsTo(db.users)
+db.users.hasMany(db.clothes)
 
 module.exports = db
 
