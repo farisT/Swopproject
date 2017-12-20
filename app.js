@@ -35,6 +35,7 @@ require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
 require("./routes/subscription.js")(app)
+require("./routes/profilepage.js")(app)
 
 db.sequelize.sync({ 
     force: false,

@@ -561,5 +561,54 @@ width: 65%
 	text-align: center;
 }
 
+/*PROFILE PAGE*/
+
+
+#profiletabs {
+
+	float:right;
+	padding-top:190px;
+
+}
+
+#profiletabs li {
+
+	background-color: #D8D8D8;
+}
+
+#profiletable {
+
+	font-family: Helvetica;
+	font-size: 14px;
+	width: 80%;
+	margin-left: 125px;
+
+}
+
+#profiletable thead {
+	background-color: #D8D8D8;
+}
+
+.greyspace {
+
+	background-color: #F4F4F4;
+	height: 250px;
+    width: 100%;
+
+}
+
+.userinfo {
+
+	display: block;
+}
+
+
+
+
+
+
+
+
+
 
 
