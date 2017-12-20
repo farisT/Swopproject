@@ -24,6 +24,7 @@ app.use(session({
 }))
 
 // ROUTES 
+
 require("./routes/index.js")(app, db) 
 require("./routes/swopmen.js")(app, db)
 require("./routes/swopwomen.js")(app, db)
@@ -33,6 +34,7 @@ require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
+require("./routes/subscription.js")(app)
 
 db.sequelize.sync({ 
     force: true, // CHANGE THIS WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
@@ -40,8 +42,8 @@ db.sequelize.sync({
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
+
 	})
 })
-
 
 
