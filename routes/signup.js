@@ -25,7 +25,7 @@ module.exports = (app, db, bcrypt) => {
                             address: `${req.body.address}`,
                             zip_code: `${req.body.zipcode}`,
                             city: `${req.body.city}`,
-                            phone_number: `${areaCode}${req.body.phoneNumber}`,
+                            phone_number: `+31${req.body.phoneNumber}`,
                             date_of_birth: `31-05-1993`, // WORK OUT HOW TO FIX THIS
                             password: `${hash}`
                         })
