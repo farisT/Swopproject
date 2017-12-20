@@ -350,8 +350,14 @@ width: auto;
 .copyright img {
 	float: right;
 	width: 80%;
-	padding-left: 250px;
+	padding-left: 325px;
 	padding-top: 50px;
+}
+
+.span2 {
+
+	margin-left: 50px;
+
 }
 
 
@@ -373,18 +379,16 @@ div.row {
 	background-color: #E8E8E8;
 }
 
-/*.content-heading {
-
-	width: 100%;
-	clear:left;
 
 
-}
-*/
 .clearfix.content-heading p {
-
+	padding-top: 10px;
 	padding-right: 20px;
+	font-size: 13px;
 }
+
+
+/*HOW IT WORKS*/
 
 
 
