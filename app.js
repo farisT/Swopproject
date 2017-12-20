@@ -20,25 +20,6 @@ var sess = {secret: 'keyboard cat',cookie: {}}
 app.use(session(sess))
 
 // ROUTES 
-<<<<<<< HEAD
-require("./routes/index.js")(app) 
-
-require("./routes/swopmen.js")(app)
-require("./routes/swopwomen.js")(app)
-
-require("./routes/aboutswop.js")(app)
-require("./routes/howitworks.js")(app)
-
-require("./routes/subscription.js")(app)
-require("./routes/signup.js")(app)
-require("./routes/login.js")(app)
-
-
-
-
-app.listen(3001, () => {
-    console.log("listening to 3001")
-=======
 require("./routes/index.js")(app, db) 
 require("./routes/swopmen.js")(app, db)
 require("./routes/swopwomen.js")(app, db)
@@ -53,7 +34,6 @@ db.sequelize.sync({
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
->>>>>>> 5e2102d5d005db27bc3a6e25cc8f53bbf022865b
 })
 })
 
