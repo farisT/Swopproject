@@ -16,18 +16,20 @@ console.log(env.WEBPORT)
 app.use(bodyParser.urlencoded({extended:true}))// 
 app.use(express.static(path.join(__dirname, 'public'))); // to give app.js access to images on server
 
-var sess = {secret: 'keyboard cat',cookie: {}}
-app.use(session(sess))
+app.use(session({
+    secret: 'keyboard cat', // MAKE THIS AN ENV VARIABLE ALSO
+    cookie: {},
+    resave: true,               
+    saveUninitialized: true     
+}))
 
 // ROUTES 
 require("./routes/index.js")(app, db) 
-
 require("./routes/swopmen.js")(app, db)
 require("./routes/swopwomen.js")(app, db)
-
 require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
-
+require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
@@ -40,5 +42,6 @@ db.sequelize.sync({
 	console.log('Running on', WEBPORT)
 	})
 })
+
 
 
