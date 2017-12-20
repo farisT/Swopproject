@@ -425,7 +425,7 @@ width: auto;
 
 .row img {
 
-	width: 51%;
+	width: 50%;
 	opacity:0.7;
 	padding-right: 20px;
 }
@@ -434,7 +434,7 @@ div.row {
 
 	margin-left: 150px;
 	margin-right:150px;
-	background-color: #E8E8E8;
+
 }
 
 
@@ -443,12 +443,34 @@ div.row {
 	padding-top: 10px;
 	padding-right: 20px;
 	font-size: 13px;
+	font-family: Helvetica;
 }
+
+#greybg {
+
+	background-color: #E8E8E8;
+
+}
+
 
 
 /*HOW IT WORKS*/
 
+#list {
+
+	padding-top: 40px;
+}
+
+#underlisttext {
+
+    margin-top: 370px;
+    padding-left: 50px;
+
+}
+
+#howitworksimg {
 
 
-
+	width: 45%
+}
 
