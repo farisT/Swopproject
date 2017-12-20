@@ -25,9 +25,13 @@ html
 							p(class="subscripText") Swop your items and earn Swop-credit
 							p(class="subscripText") Borrow with your Swop-credit
 							p(class="subscripText") Prepaid Swop-credit available
+							p(class="subscripText") 
+							br
+							br
+							br
 
 
-						div(class="subscripColumn col-sm-4")
+						div(class="subscripColumn col-sm-4" id="selectedSubscription")
 							br
 							img.subscripOptionpic(src="/images/signup/subscription2.png")
 							h3(class="subscripTitle") Super Swopper
@@ -62,4 +66,8 @@ html
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
 
 	script.
-		// img#logo(src="/images/navbar/swoplogo.png")
+		$(document).ready(function(){
+			$(".subscripColumn").click(function(){
+				$(".subscripColumn").removeAttr("id")
+			})
+		})

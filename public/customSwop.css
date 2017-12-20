@@ -292,6 +292,10 @@ width: auto;
 	width: auto;
 }
 
+#selectedSubscription{
+	border: solid 2px #5C715F;
+}
+
 /* SIGN IN PAGE */
 #signinpic{
 	height: 650px;
