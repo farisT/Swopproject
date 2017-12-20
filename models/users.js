@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         subscription: {
             type: DataTypes.STRING,
-            values: [ "DIFFERENT" , 'SUBS' , 'HERE' , ]
+            values: [ 'simple_shopper' , 'super_swopper' , 'swopaholic' , ]
         },
         address: {
             type: DataTypes.STRING,
@@ -40,20 +40,14 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         date_of_birth: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             unique: false,
             allowNull: false
         },
         password: {
             type: DataTypes.STRING,
             unique: false,
-            allowNull: false,
-            validate: {
-                len: {
-                    args: [8, 20], // specific to this error
-                    msg: 'Password must contain at least 8 characters'
-                }
-            }
+            allowNull: false
         },
     })
     return User;
