@@ -8,6 +8,14 @@ body{
     margin: 0;
 }
 
+.spacer200 {
+height: 200px;
+}
+
+.spacer100 {
+height: 100px;
+}
+
 .titleFont, h3{
 	font-family: Helvetica;
 	font-size: 26px;
@@ -165,6 +173,26 @@ width: auto;
 
 }
 
+#whitebutton{
+
+	font-family: Helvetica;
+	font-size:18px;
+	color:  #5C715F;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px ;
+	padding-bottom: 10px;
+	border-color: white;
+
+}
+
+#whitebutton:hover {
+
+	background-color: white;
+	border-color: white;
+
+}
+
 .btn-default:hover {
     color: white;
     background-color: #5C715F;
@@ -212,7 +240,7 @@ width: auto;
   text-align: center;
 }
 
-.img-overlay button {
+.img-overlay a {
     margin-right: 185px;
     margin-left: 140px;
   	padding-left: 50px;
@@ -380,9 +408,45 @@ width: auto;
 .copyright img {
 	float: right;
 	width: 80%;
-	padding-left: 250px;
+	padding-left: 325px;
 	padding-top: 50px;
 }
+
+.span2 {
+
+	margin-left: 50px;
+
+}
+
+
+/*ABOUT PAGE*/
+
+
+
+.row img {
+
+	width: 51%;
+	opacity:0.7;
+	padding-right: 20px;
+}
+
+div.row {
+
+	margin-left: 150px;
+	margin-right:150px;
+	background-color: #E8E8E8;
+}
+
+
+
+.clearfix.content-heading p {
+	padding-top: 10px;
+	padding-right: 20px;
+	font-size: 13px;
+}
+
+
+/*HOW IT WORKS*/
 
 
 
