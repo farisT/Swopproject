@@ -1,4 +1,4 @@
-module.exports = (app) => {
+module.exports = (app, db) => {
 	app.get('/swopmen', (req, res) => {
 			res.render('swopmen')
 	})
