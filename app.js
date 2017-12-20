@@ -38,7 +38,3 @@ db.sequelize.sync({
 })
 
 
-// app.listen(process.env.webport, ()=>{
-// 	console.log('Running on', process.env.webport)
-// })
-
