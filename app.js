@@ -30,6 +30,8 @@ require("./routes/swopwomen.js")(app, db)
 require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
 require("./routes/signup.js")(app, db, bcrypt)
+require("./routes/subscription.js")(app)
+require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
 
 db.sequelize.sync({ 
@@ -38,7 +40,8 @@ db.sequelize.sync({
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
+	})
 })
-})
+
 
 

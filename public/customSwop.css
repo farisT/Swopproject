@@ -276,7 +276,7 @@ width: auto;
 }
 
 .subscripColumn{
-	padding: 0px 15px 0px 15px;
+	padding: 0px 13px 0px 13px;
 }
 .subscripOptionpic{
 	height: 80px;
@@ -421,23 +421,17 @@ width: auto;
 
 /*ABOUT PAGE*/
 
-
-
-.row img {
-
+.rowAbout img {
 	width: 51%;
 	opacity:0.7;
 	padding-right: 20px;
 }
 
-div.row {
-
+div.rowAbout {
 	margin-left: 150px;
 	margin-right:150px;
 	background-color: #E8E8E8;
 }
-
-
 
 .clearfix.content-heading p {
 	padding-top: 10px;
