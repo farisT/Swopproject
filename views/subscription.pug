@@ -69,5 +69,8 @@ html
 		$(document).ready(function(){
 			$(".subscripColumn").click(function(){
 				$(".subscripColumn").removeAttr("id")
+				$(this).attr('id', 'selectedSubscription')
 			})
 		})
+
+		
