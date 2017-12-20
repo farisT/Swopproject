@@ -18,20 +18,24 @@ module.exports = (app, db, bcrypt) => {
                     console.log("The error: ", err)
                 } else {
                 	console.log(hash)
+                	console.log(req.body)
+                	console.log(req.body.dateOfBirth)
                     db.users.create({
-                            first_name: ,
-                            last_name: ,
-                            email: ,
-                            subscription: ,
-                            address: ,
-                            zip_code: ,
-                            city: ,
-                            phone_number: ,
-                            date_of_birth: ,
+                            first_name: `${req.body.firstname}`,
+                            last_name: `${req.body.lastname}`,
+                            email: `${req.body.email}`,
+                            subscription: `simple_shopper`,
+                            address: `${req.body.address}`,
+                            zip_code: `${req.body.zipcode}`,
+                            city: `${req.body.city}`,
+                            phone_number: `+31${req.body.phoneNumber}`,
+                            date_of_birth: `31-05-1993`,
                             password: `${hash}`
                         })
                         .then((result) => {
                             console.log("SIGN UP SUCCESSFUL: @FARIS AND PATRICIA WHERE DO WE REDIRECT TO NOW?")
+                        	res.send('worked')
+
                         })
                         .catch(e => {
                             console.log("The error: ", e)
