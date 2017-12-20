@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         subscription: {
             type: DataTypes.STRING,
-            values: [ "DIFFERENT" , 'SUBS' , 'HERE' , ]
+            values: [ 'simple_shopper' , 'super_swopper' , 'swopaholic' , ]
         },
         address: {
             type: DataTypes.STRING,
