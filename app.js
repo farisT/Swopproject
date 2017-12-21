@@ -13,14 +13,16 @@ const express = require("express"),
     cb(null, 'public/images/uploaditem')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname)
+   cb(null, Date.now() + path.extname(file.originalname))
   }
+
+
 })
 	  upload = multer({ storage: storage }),
 	  // upload = multer({ dest: 'public/images/uploaditem' }),
 	  db = require(path.resolve( __dirname, "./config/db.js" ))
 	  env = require(path.resolve( __dirname, "./config/.env.js" ))
-	  upload = multer({ dest: "images/dbUploadedPhotos/"})
+
 
 require ('dotenv').load()
 app.set("view engine", "pug")
