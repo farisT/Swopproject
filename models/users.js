@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         phone_number: {
             type: DataTypes.STRING,
-            unique: true,
+            unique: false,
             allowNull: false
         },
         date_of_birth: {

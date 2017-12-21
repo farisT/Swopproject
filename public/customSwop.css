@@ -23,6 +23,13 @@ height: 100px;
 	font-weight: 500;
 }
 
+.errorText{
+	font-family: Helvetica;
+	font-size: 15px;
+	color: red;
+	font-weight: 500;
+}
+
 p{
 	font-family: Helvetica;
 	color: #5F5F5F;

@@ -7,25 +7,31 @@ html
 			
 	body(id="loginPage")
 		include nav
-		div(class="navbarspacing")
 		div(class="container")
 			div(class="row")
 				div(class="col-lg-10 col-lg-offset-1 backgroundLogin")
 					img#signinpic(src="/images/login/loginpic.png")
 					div(class="theForm")
 						h4(class="titleFont") Login
-						h2 #{errorLogin}
-						form(class="input-group input-group-sm")
-							input(class="form-control" id="loginEmail" type="text" placeholder="Email*" required)
-							input(class="form-control" id="loginPassword" type="password" placeholder="Password*" required)
+						if(space)
+							br
+							br
+						if(errorLoginEmail)
+							h5(class="errorText") #{errorLoginEmail}
+							h5(class="errorText") Not signed up yet? Click #[a(href='subscription') here] to sign up
+						if(errorLoginPassword)
+							br
+							h5(class="errorText") #{errorLoginPassword}
+						
+
+							
+						form(class="input-group input-group-sm" method="POST" action="/loginRoute")
+							input(class="form-control" id="loginEmail" name="email" type="text" placeholder="Email*" required)
+							input(class="form-control" id="loginPassword" name="password" type="password" placeholder="Password*" required)
 							input(class="submitelement" id="submitLogin" type="submit" value="Login >")
-										
-
-
-
+									
 		include footer
 
 	
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
-

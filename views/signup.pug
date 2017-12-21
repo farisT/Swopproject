@@ -7,15 +7,17 @@ html
 			
 	body(id="signupPage")
 		include nav
-		div(class="navbarspacing")
 		div(class="container")
 			div(class="row")
 				div(class="col-sm-6 col-sm-offset-1")
 					img#signinpic(src="/images/signup/signinpic.png")
 				div(class="col-sm-4 signupDiv")
-					br
 					h4(class="titleFont") Become a swopper!
-					br
+					if(errorSignup)
+						h5(class="errorText") #{errorSignup}
+					else
+						br
+						br
 					form(class="input-group input-group-sm" method="POST" action="/signUp")
 						input(type="hidden" name="subscription" value=`${subscription}`) 
 						input(class="form-control" type="text" name="firstname" placeholder="First name*" required)
@@ -29,7 +31,7 @@ html
 								input(class="form-control" type="text" name="city" placeholder="City*" required)
 						div(class="row")
 							div(class="col-sm-4 input-group-sm")
-								input(class="form-control" type="tel" name="areaCode" value="+31" required)
+								input(class="form-control" type="tel" name="areaCode" value="+31" required disabled) 
 							div(class="col-sm-8 input-group-sm")
 								input(class="form-control" type="text" name="phoneNumber" placeholder="Phone" required)
 
@@ -37,17 +39,16 @@ html
 							div(class="col-sm-4 input-group-sm")
 								p(class="form-control") Date of Birth
 							div(class="col-sm-8 input-group-sm")
-								input(class="form-control" type="date" name="dateOfBirth" required)
+								input(class="form-control" type="text" name="dateOfBirth" placeholder="DD/MM/YYYY" required)
 						input(class="form-control" type="password" name="password" placeholder="Password*" required)
 						input(class="form-control" type="password" placeholder="Confirm password*" required)
 						div(class="row")
 							div(class="col-sm-1 col-sm-offset-5 input-group-sm")
 								input(class="form-control" id="checkboxSignin" type="checkbox" value="")
 							div(class="col-sm-6 input-group-sm")
-								label(id="labelCheckbox") Agree to our #[a(href='#') Terms and Conditions]
+								label(id="labelCheckbox") Agree to our #[a(href="https://termsfeed.com/blog/sample-terms-and-conditions-template/" TARGET="_blank") Terms and Conditions]
 						input(class="submitelement" id="submitSignup" type="submit" value="Next >")
 
-					
 		include footer				
 								
 

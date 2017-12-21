@@ -46,7 +46,7 @@ require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/login.js")(app, db)
 require("./routes/logout.js")(app, db)
-require("./routes/profilepage.js")(app,db)
+require("./routes/profile.js")(app,db)
 require("./routes/uploaditem.js")(app,db,upload, path, fs)
 
 

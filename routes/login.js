@@ -1,44 +1,60 @@
 module.exports = (app, db, bcrypt) => {
-    app.get("/login", (req, res) => {
-        res.render("login", {
-            isLoggedIn: true,
-            title: "Login"
-        })
-    })
+var bcrypt = require('bcrypt')
 
-	app.post("/login", (req, res) => {
+	app.get("/login", (req, res) => {
+		if (req.session.user) { // already logged in so no need to login > index page rendered
+			res.render("index", {
+				user: req.session.user.name
+			})
+		} else {
+			res.render("login",{
+				space: "space"
+				})
+		}
+	})
+	 
+	app.post("/loginRoute", (req, res) => {
 		db.users.findAll({
 			where: {
-    		email: `${req.body.email}`
-    		}
+			email: req.body.email
+			}
 		})
 		.then((result)=> {
-			console.log(result)
-        	if (!result[0].dataValues.email) {
-        		res.render("login", {
-        			errorLogin: "Email address not found: please sign up"
-        		})
-       		 } else {
-				bcrypt.compare(req.body.password, result[0].dataValues.password).then(function(result){
-					if (result == true) {
-						req.session.user = {name: result[0].dataValues.first_name}
-						res.render("profile", {
-						user: req.session.user.name
-						})
-					} else if (result == false ) {
-						console.log("nah m8")
+			console.log("result=", result)
+			console.log("result.length", result.length)
+			// console.log("result[0].dataValues.password = ", result[0].dataValues.password)
+			// console.log("result[0].dataValues.first_name = ", result[0].dataValues.first_name)
+			// console.log("result of req.body.password", req.body.password)
+			if (result.length <= 0) { // so if email doesn't exist in database
+				res.render("login", {
+					errorLoginEmail: "Email address not found"
+				})
+			}
+			else if (result.length >= 1) { // if email does exist in database > password check
+				var hashedPassword = result[0].dataValues.password
+				var firstNameUser = result[0].dataValues.first_name
+				console.log("firstnameuser = ", firstNameUser)
+				bcrypt.compare(req.body.password, hashedPassword).then(function(result){
+					console.log(result)
+					if (result == true) { // if password is correct > go to profile page
+						req.session.user = {name: firstNameUser}
+						if(req.session.user.name){
+							res.render("profile", {
+								user: req.session.user.name
+							})
+						}
+					} 
+					else {
+						console.log("nah m8 password incorrect")
 						res.render("login", {
-           					errorLogin: "Incorrect password and email address combination: please try again"
+							errorLoginPassword: "Incorrect password and email combination: please try again"
 						})
-					} else {
-						console.log("failed @ end")
-						res.end()
 					}
 				})
-				}
-	 		})
-	 	.catch((e) => {
-       	 console.log(e)
+			}
+		})
+		.catch((e) => {
+		 console.log(e)
 		})
 	})
 }
