@@ -18,7 +18,9 @@ html
 						div(class="row")
 							div(class="col-sm-4")
 								img#iconUpload(src="images/uploadPage/uploadIcon.png")
-								input(type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" single)
+							form(action="/uploaditem" method="POST" enctype="multipart/form-data")
+								input(type="file" name="file" id="file" accept=".jpg, .jpeg, .png" )
+								input(type="submit" name="submit" id="submit")
 							div(class="col-sm-7 col-sm-offset-1")
 								select(class="form-control" required)
 									option(value="" disabled selected) Categories*
@@ -76,13 +78,12 @@ html
 
 
 
+		.spacer200
 
 
 
 
-
-
-
+		include footer
 
 	
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
