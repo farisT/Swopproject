@@ -17,6 +17,7 @@ html
 					h4(class="titleFont") Become a swopper!
 					br
 					form(class="input-group input-group-sm" method="POST" action="/signUp")
+						input(type="hidden" name="subscription" value=`${subscription}`) 
 						input(class="form-control" type="text" name="firstname" placeholder="First name*" required)
 						input(class="form-control" type="text" name="lastname" placeholder="Last name*" required)
 						input(class="form-control" type="text" name="email" placeholder="Email*" required)

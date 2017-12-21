@@ -32,12 +32,9 @@ require("./routes/swopwomen.js")(app, db)
 require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
 require("./routes/subscription.js")(app)
-require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/login.js")(app, db)
-
 require("./routes/uploaditem.js")(app, db)
-
 require("./routes/profilepage.js")(app)
 
 
