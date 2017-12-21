@@ -13,19 +13,20 @@ const express = require("express"),
     cb(null, 'public/images/uploaditem')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname)
+   cb(null, Date.now() + path.extname(file.originalname))
   }
+
+
 })
 	  upload = multer({ storage: storage }),
 	  // upload = multer({ dest: 'public/images/uploaditem' }),
 	  db = require(path.resolve( __dirname, "./config/db.js" ))
 	  env = require(path.resolve( __dirname, "./config/.env.js" ))
-	  upload = multer({ dest: "images/dbUploadedPhotos/"})
+
 
 require ('dotenv').load()
 app.set("view engine", "pug")
 var WEBPORT = env.WEBPORT
-console.log(env.WEBPORT)
 app.use(bodyParser.urlencoded({extended:true}))// 
 app.use(express.static(path.join(__dirname, 'public'))); // to give app.js access to images on server
 
@@ -51,12 +52,11 @@ require("./routes/uploaditem.js")(app,db,upload, path, fs)
 
 
 db.sequelize.sync({ 
-    force: false, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
+    force: true, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
     logging: console.log 
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
-
 	})
 })
 

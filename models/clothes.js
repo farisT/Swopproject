@@ -10,13 +10,13 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 unique: false,
                 allowNull: false,
-                values: ['S', 'M', 'L']
+                values: ['XS', 'S', 'M', 'L', 'XL']
             },
             gender: {
                 type: DataTypes.STRING,
                 unique: false,
                 allowNull: false,
-                values: ['Man', 'Woman', 'Unisex']
+                values: ['Man', 'Woman']
             },
             brand: {
                 type: DataTypes.STRING,
@@ -50,6 +50,11 @@ module.exports = (sequelize, DataTypes) => {
                 unique: false,
                 allowNull: false,
                 values: ['New', 'Good as new', 'Used']
+            }, 
+            image: {
+                type: DataTypes.STRING,
+                unique: false,
+                allowNull: false
             }
         })
 return Clothes;

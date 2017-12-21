@@ -2,7 +2,7 @@ module.exports = (app, db) => {
 	app.get('/uploadpage', (req, res) => {
 		if(req.session.user){
 			res.render('uploadpage',{
-				username: req.session.user.name
+				user: req.session.user.name
 			})
 		}
 		else {

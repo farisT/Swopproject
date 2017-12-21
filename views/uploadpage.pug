@@ -13,13 +13,12 @@ html
 					br
 					h4(class="titleFont") Upload item
 					br
-					form(class="input-group input-group-sm" id="uploadForm" method="POST" action="/signUp")
+
+					form(action="/uploaditem" method="POST" enctype="multipart/form-data" class="input-group input-group-sm")
 						div(class="row")
 							div(class="col-sm-4")
 								img#iconUpload(src="images/uploadPage/uploadIcon.png")
-							form(action="/uploaditem" method="POST" enctype="multipart/form-data")
-								input(type="file" name="file" id="file" accept=".jpg, .jpeg, .png" )
-								input(type="submit" name="submit" id="submit")
+								input(type="file" name="file" id="file")
 							div(class="col-sm-7 col-sm-offset-1")
 								select(class="form-control" required)
 									option(value="" disabled selected) Categories*
@@ -45,11 +44,10 @@ html
 									option(value="XL") XL
 						div(class='row')
 							div(class="col-sm-4")
-								input(class="form-control" type="button" value="Women" required)
+								input(id="uploadbuttons" class="form-control" type="button" value="Women" required)
 							div(class='col-sm-4')
-								input(class="form-control" type="button" value="Men" required)
-							div(class="col-sm-4")
-								input(class="form-control" type="button" value="Unisex" required)
+								input(id="uploadbuttons" class="form-control" type="button" value="Men" required)
+
 
 						input(class="form-control" type="text" placeholder="Brand")
 						select(class="form-control" required)
@@ -68,15 +66,17 @@ html
 								input(class="form-control" type="button" value="Good as new" required)
 							div(class="col-sm-4")
 								input(class="form-control" type="button" value="Used" required)
-						
-						input(class="submitelement" id="submitLogin" type="submit" value="Login >")
-					
+
+						input(type="submit" name="submit" id="submit" value="Send " class="btn btn-default")
+
 				div(class="col-sm-4" id="parentDiv2Upload")
 					img#uploadBackgrPhoto(src="/images/uploadPage/backgrUploaditem.png")
-					h3(class="titlefont" id="photoTextUpload") When you've uploaded your item we will let you know if it is sufficient for swopping
+					h3(class="titlefont", id="photoTextUpload") When you've uploaded your item we will let you know if it is sufficient for swopping.
 
 
 
+
+		.spacer200
 		.spacer200
 
 
@@ -84,6 +84,23 @@ html
 
 		include footer
 
-	
+
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+	script.
+		$(document).ready(function(){
+
+			$(".form-control").click(function(){
+			$(".form-control").removeAttr("id", "uploadbuttons")
+			$(this).attr('id', 'uploadbuttons')
+
+				})
+			})
+		//- $("#uploadbuttons").click(function(){
+		//- 	$('#uploadbuttons').focus({
+		//- 		'background-color': '#5C715F',
+		//- 		'color': 'white',
+
+		//- 			 });
+		//- 			});

@@ -474,25 +474,65 @@ div.rowAbout {
 
 
 /*UPLOAD ITEM PAGE*/
-#parentDiv1Upload{
-	
+
+
+#uploaditemPage .btn-default {
+	margin-top: 20px;
+	margin-left: 250px;
+	background-color: #5C715F;
+	color: white;
+
 }
+
+
+#uploaditemPage .form-control{
+
+	color: black;
+
+}
+
+
+
+
+#uploaditemPage #uploadbuttons {
+
+	background-color: #5C715F;
+	color: white;
+}
+
+/*#uploaditemPage #uploadbuttons2:focus {
+
+	
+	background-color: #5C715F;
+	color: white;
+}*/
+
+
+#parentDiv1Upload {
+
+	background-color: #ECECEC;
+	height: 550px;
+}
+
+#parentDiv2Upload {
+
+	background-color: #ECECEC;
+	position: relative;
+}
+
+
 
 #iconUpload{
 	height: 75%;
 }
 
 
-#parentDiv2Upload{
-	position: relative;
-}
-
 
 #photoTextUpload{
 	position: absolute;
 	top: 20%;
 	left: 20%;
-	font-size: 22px;
+	font-size: 18px;
 	text-align: center;
 	width: 60%;
 }
@@ -642,8 +682,6 @@ width: 65%
 
 	display: block;
 }
-
-
 
 
 
