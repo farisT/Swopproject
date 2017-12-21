@@ -7,12 +7,79 @@ html
 			
 	body(id="uploaditemPage")
 		include nav
+		div(class="navbarspacing")
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-4 col-sm-offset-2" id="parentDiv1Upload")
+					br
+					h4(class="titleFont") Upload item
+					br
+					form(class="input-group input-group-sm" id="uploadForm" method="POST" action="/signUp")
+						div(class="row")
+							div(class="col-sm-4")
+								img#iconUpload(src="images/uploadPage/uploadIcon.png")
+							form(action="/uploaditem" method="POST" enctype="multipart/form-data")
+								input(type="file" name="file" id="file" accept=".jpg, .jpeg, .png" )
+								input(type="submit" name="submit" id="submit")
+							div(class="col-sm-7 col-sm-offset-1")
+								select(class="form-control" required)
+									option(value="" disabled selected) Categories*
+									option(value="Coats & Jackets") Coats and Jackets
+									option(value="Hoodies") Hoodies
+									option(value="Sweatshirts") Sweatshirts
+									option(value="Cardigans") Cardigans
+									option(value="Jeans") Jeans
+									option(value="Trousers") Trousers
+									option(value="Skirts") Skirts
+									option(value="Shorts") Shorts
+									option(value="Suits") Suits
+									option(value="Dresses") Dresses
+									option(value="Jumpsuits") Jumpsuits
+									option(value="Accessories") Accessories
+
+								select(class="form-control" required)
+									option(value="" disabled selected) Size*
+									option(value="XS") XS
+									option(value="S") S
+									option(value="M") M
+									option(value="L") L
+									option(value="XL") XL
+						div(class='row')
+							div(class="col-sm-4")
+								input(class="form-control" type="button" value="Women" required)
+							div(class='col-sm-4')
+								input(class="form-control" type="button" value="Men" required)
+							div(class="col-sm-4")
+								input(class="form-control" type="button" value="Unisex" required)
+
+						input(class="form-control" type="text" placeholder="Brand")
+						select(class="form-control" required)
+									option(value="" disabled selected) Borrow time*
+									option(value="3") 3 months
+									option(value="4") 4 months
+									option(value="5") 5 months
+									option(value="6") 6 months
+									option(value=">6") More than 6 months
+						input(class="form-control" type="text" placeholder="comments")
+
+						div(class='row')
+							div(class="col-sm-4")
+								input(class="form-control" type="button" value="New" required)
+							div(class='col-sm-4')
+								input(class="form-control" type="button" value="Good as new" required)
+							div(class="col-sm-4")
+								input(class="form-control" type="button" value="Used" required)
+						
+						input(class="submitelement" id="submitLogin" type="submit" value="Login >")
+					
+				div(class="col-sm-4" id="parentDiv2Upload")
+					img#uploadBackgrPhoto(src="/images/uploadPage/backgrUploaditem.png")
+					h3(class="titlefont" id="photoTextUpload") When you've uploaded your item we will let you know if it is sufficient for swopping
+
+
 
 		.spacer200
 
-		form(action="/uploaditem" method="POST" enctype="multipart/form-data")
-			input(type="file" name="file" id="file" placeholder="")
-			input(type="submit" name="submit" id="submit")
 
 
 

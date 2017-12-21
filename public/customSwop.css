@@ -42,6 +42,10 @@ p{
   border: 0;
 }
 
+.form-control{
+	color: #000000;
+}
+
 .submitelement{
 	background-color: #5C715F;
 	color: white;
@@ -52,6 +56,8 @@ p{
 	font-size: 22px;
 
 }
+
+
 
 /* NAVIGATION BAR*/
 .navbarspacing{
@@ -291,8 +297,10 @@ width: auto;
 	padding: 0px 13px 0px 13px;
 }
 .subscripOptionpic{
-	height: 80px;
-	width: 100%;
+	height: 9%;
+	margin: 0 auto;
+	text-align:center;
+	display:block;
 }
 
 .subscripTitle{
@@ -432,9 +440,6 @@ width: auto;
 
 
 /*ABOUT PAGE*/
-
-
-
 .rowAbout img {
 	width: 51%;
 	opacity:0.7;
@@ -460,6 +465,35 @@ div.rowAbout {
 
 }
 
+
+/*UPLOAD ITEM PAGE*/
+#parentDiv1Upload{
+	
+}
+
+#iconUpload{
+	height: 75%;
+}
+
+
+#parentDiv2Upload{
+	position: relative;
+}
+
+
+#photoTextUpload{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	font-size: 22px;
+	text-align: center;
+	width: 60%;
+}
+
+#uploadBackgrPhoto{  
+	/*THIS IS THE PHOTO IN RIGHT COLUMN*/
+	width: 100%;
+}
 
 
 /*HOW IT WORKS*/

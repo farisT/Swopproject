@@ -17,9 +17,9 @@ html
 					h4(class="titleFont" id="titleSubscrip") Select your subscription
 					br
 					div(class="row")
-						div(class="subscripColumn col-sm-4")
+						div(class="subscripColumn col-sm-4" value="simple_swopper")
 							br
-							img.subscripOptionpic(src="/images/signup/subscription1.png")
+							img.subscripOptionpic(src="/images/signup/simpleswopper.png")
 							h3(class="subscripTitle") Simple Swopper
 							p(class="subscripPrice") €10 / m
 							p(class="subscripText") Swop your items and earn Swop-credit
@@ -31,9 +31,9 @@ html
 							br
 
 
-						div(class="subscripColumn col-sm-4" id="selectedSubscription")
+						div(class="subscripColumn col-sm-4" id="selectedSubscription" value="super_swopper")
 							br
-							img.subscripOptionpic(src="/images/signup/subscription2.png")
+							img.subscripOptionpic(src="/images/signup/superswopper.png")
 							h3(class="subscripTitle") Super Swopper
 							p(class="subscripPrice") €20 / m
 							p(class="subscripText") Standard 5 Swop-credits / m
@@ -42,9 +42,9 @@ html
 							p(class="subscripText") 10% discount on prepaid Swop-credit
 
 
-						div(class="subscripColumn col-sm-4")
+						div(class="subscripColumn col-sm-4" value="swopaholic")
 							br
-							img.subscripOptionpic(src="/images/signup/subscription2.png")
+							img.subscripOptionpic(src="/images/signup/swopaholic.png")
 							h3(class="subscripTitle") Swopaholic
 							p(class="subscripPrice") €25 / m
 							p(class="subscripText") Standard 10 Swop-credits / m
@@ -52,8 +52,9 @@ html
 							p(class="subscripText") Borrow with your Swop-credit
 							p(class="subscripText") 20% discount on prepaid Swop-credit
 					p(class="subscripLabel") To maintain the quality and style of the collection, we select Swop items to be put 			in the collection. Please read our full #[a(href='#') Terms and Conditions] for more information
-
-					input(class="submitelement" id="submitSubscrip" type="submit" value="Make profile >")
+					form(method="POST" action="/subscriptionRoute")
+						input(type="hidden" id="subscriptionType" name="button")
+						input(class="submitelement" id="submitSubscrip" type="submit" value="Make profile >")
 
 					
 		include footer				
@@ -67,10 +68,12 @@ html
 
 	script.
 		$(document).ready(function(){
+			var subscription = "super_swopper"
 			$(".subscripColumn").click(function(){
-				$(".subscripColumn").removeAttr("id")
+				$(".subscripColumn").removeAttr("id", "selectedSubscription")
 				$(this).attr('id', 'selectedSubscription')
+				subscription = $("#selectedSubscription").attr("value")
+				$("#subscriptionType").attr("value", subscription)
 			})
 		})
-
 		

@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
                 unique: false,
                 allowNull: false,
                 validate: {
-                    startsWithUpper: function(bodyval) {
+                    startsWithUpper: function(bodyval, Error) {
                         var first = bodyVal.charAt(0)
                         var startsWithUpper = first === first.toUpperCase()
                         if (!startsWithUpper) {
