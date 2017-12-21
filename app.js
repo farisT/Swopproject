@@ -6,6 +6,18 @@ const express = require("express"),
 	  Client = pg.Client, 
 	  bcrypt = require('bcrypt'),
 	  path = require('path'),
+	  multer  = require('multer'),
+	  fs = require('fs'),
+	  storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/uploaditem')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
+	  upload = multer({ storage: storage }),
+	  // upload = multer({ dest: 'public/images/uploaditem' }),
 	  db = require(path.resolve( __dirname, "./config/db.js" ))
 	  env = require(path.resolve( __dirname, "./config/.env.js" ))
 
@@ -35,7 +47,10 @@ require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db)
 require("./routes/login.js")(app, db)
 require("./routes/subscription.js")(app)
-require("./routes/profilepage.js")(app)
+require("./routes/profilepage.js")(app,db)
+require("./routes/uploadpage.js")(app,db)
+require("./routes/uploaditem.js")(app,db,upload, path, fs)
+
 
 db.sequelize.sync({ 
     force: true, // CHANGE THIS WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 

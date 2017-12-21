@@ -8,9 +8,15 @@ html
 	body(id="uploaditemPage")
 		include nav
 
+		.spacer200
+
+		form(action="/uploaditem" method="POST" enctype="multipart/form-data")
+			input(type="file" name="file" id="file" placeholder="")
+			input(type="submit" name="submit" id="submit")
 
 
 
+		include footer
 
 	
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
