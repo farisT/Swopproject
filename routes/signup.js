@@ -30,10 +30,11 @@ module.exports = (app, db, bcrypt) => {
                             password: `${hash}`
                         })
                         .then((result) => {
-                            console.log("SIGN UP SUCCESSFUL: @FARIS AND PATRICIA WHERE DO WE REDIRECT TO NOW?")
-                        	res.render('profile', {
-                        		
-                        	})
+							req.session.user = {name: req.body.firstname}
+							
+							res.render("profile", {
+							user: req.session.user.name
+							})
                         })
                         .catch(e => {
                             console.log("The error: ", e)
