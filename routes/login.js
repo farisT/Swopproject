@@ -13,8 +13,9 @@ module.exports = (app, db, bcrypt) => {
     		}
 		})
 		.then((result)=> {
-        	if (!result[0].dataValues.password) {
-        		res.render("/login", {
+			console.log(result)
+        	if (!result[0].dataValues.email) {
+        		res.render("login", {
         			errorLogin: "Email address not found: please sign up"
         		})
        		 } else {
@@ -24,16 +25,20 @@ module.exports = (app, db, bcrypt) => {
 						res.render("profile", {
 						user: req.session.user.name
 						})
-					} else {
-						res.render("/login", {
+					} else if (result == false ) {
+						console.log("nah m8")
+						res.render("login", {
            					errorLogin: "Incorrect password and email address combination: please try again"
 						})
+					} else {
+						console.log("failed @ end")
+						res.end()
 					}
 				})
 				}
 	 		})
 	 	.catch((e) => {
        	 console.log(e)
-		    })
+		})
 	})
 }
