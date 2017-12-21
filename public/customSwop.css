@@ -57,6 +57,8 @@ p{
 
 }
 
+
+
 /* NAVIGATION BAR*/
 .navbarspacing{
 	height: 150px;
@@ -426,7 +428,6 @@ width: auto;
 
 
 /*ABOUT PAGE*/
-
 .rowAbout img {
 	width: 51%;
 	opacity:0.7;
@@ -446,9 +447,33 @@ div.rowAbout {
 }
 
 
-/*HOW IT WORKS*/
+/*UPLOAD ITEM PAGE*/
+#parentDiv1Upload{
+	
+}
+
+#iconUpload{
+	height: 75%;
+}
 
 
+#parentDiv2Upload{
+	position: relative;
+}
+
+#photoTextUpload{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	font-size: 22px;
+	text-align: center;
+	width: 60%;
+}
+
+#uploadBackgrPhoto{  
+	/*THIS IS THE PHOTO IN RIGHT COLUMN*/
+	width: 100%;
+}
 
 
 

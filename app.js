@@ -8,6 +8,8 @@ const express = require("express"),
 	  path = require('path'),
 	  db = require(path.resolve( __dirname, "./config/db.js" ))
 	  env = require(path.resolve( __dirname, "./config/.env.js" ))
+	  multer  = require('multer')
+	  upload = multer({ dest: "images/dbUploadedPhotos/"})
 
 require ('dotenv').load()
 app.set("view engine", "pug")
@@ -23,16 +25,18 @@ app.use(session({
     saveUninitialized: true     
 }))
 
-// ROUTES 
+// ROUTE 
 require("./routes/index.js")(app, db) 
 require("./routes/swopmen.js")(app, db)
 require("./routes/swopwomen.js")(app, db)
 require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
-require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/subscription.js")(app)
-require("./routes/signup.js")(app, db)
+require("./routes/signup.js")(app, db, bcrypt)
 require("./routes/login.js")(app, db)
+require("./routes/uploaditem.js")(app, db)
+
+
 
 db.sequelize.sync({ 
     force: false,
