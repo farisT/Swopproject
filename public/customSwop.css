@@ -161,6 +161,8 @@ width: auto;
    	text-align: center;
 }
 
+
+
 .greenblockfooter {
 	background-color: #5C715F;
     height: 240px;
@@ -211,8 +213,9 @@ width: auto;
 	color:  white;
 	padding-top: 30px;
 }
+/*FOOTER*/
+#footerlist {
 
-.unstyled {
 	margin-top: 0;
     float: left;
     display: inline-table;
@@ -221,12 +224,21 @@ width: auto;
     font-family: Helvetica;
     color: white;
     padding-left: 90px;
+
+
 }
 
-.unstyled li a{
-	 text-decoration: none;
+#footerlist li a {
+
+	text-decoration: none;
 	 color: white;
+
+
 }
+
+
+
+/**/
 
 .span2 {
 	margin-left: 120px;
@@ -437,13 +449,20 @@ width: auto;
 div.rowAbout {
 	margin-left: 150px;
 	margin-right:150px;
-	background-color: #E8E8E8;
+
 }
 
 .clearfix.content-heading p {
 	padding-top: 10px;
 	padding-right: 20px;
 	font-size: 13px;
+	font-family: Helvetica;
+}
+
+#greybg {
+
+	background-color: #E8E8E8;
+
 }
 
 
@@ -461,6 +480,7 @@ div.rowAbout {
 	position: relative;
 }
 
+
 #photoTextUpload{
 	position: absolute;
 	top: 20%;
@@ -474,6 +494,155 @@ div.rowAbout {
 	/*THIS IS THE PHOTO IN RIGHT COLUMN*/
 	width: 100%;
 }
+
+
+/*HOW IT WORKS*/
+
+#howitworksimg {
+	width: 51%;
+	padding-right: 45px;
+}
+
+div.rowHow {
+	margin-left: 150px;
+	margin-right:150px;
+
+}
+
+.howitworkstitle {
+
+	margin-top: 0;
+}
+
+#list {
+
+	padding-top: 40px;
+	width: 55%;
+}
+
+#underlisttext {
+
+    margin-top: 365px;
+    padding-left: 50px;
+
+}
+
+#howitworksimg {
+
+	width: 45%
+}
+
+#ourservices {
+
+width: 65%
+
+}
+
+#service {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #F7F7F7;
+}
+
+
+#rowHow {
+	margin-left: 300px;
+}
+
+
+#hiwsteps {
+
+	margin-top: 0;
+    float: left;
+    display: inline-table;
+    list-style: none;
+    font-size: 18px;
+    font-family: Helvetica;
+    padding-left: 90px;
+    color: #86A08D;
+}
+
+#hiwtext {
+
+	margin-top: 0;
+    float: left;
+    display: inline;
+    list-style: none;
+    font-size: 12px;
+    font-family: Helvetica;
+    padding-left: 50px;
+    width: 50%;
+    padding-top: 40px;
+
+}
+
+#hiwsteps li {
+
+	padding-top: 40px;
+}
+
+.paraspace2 {
+	margin-top: 20px;
+}
+
+.paraspace {
+
+	margin-top: 23px;
+}
+
+.center {
+
+	text-align: center;
+}
+
+/*PROFILE PAGE*/
+
+
+#profiletabs {
+
+	float:right;
+	padding-top:190px;
+
+}
+
+#profiletabs li {
+
+	background-color: #D8D8D8;
+}
+
+#profiletable {
+
+	font-family: Helvetica;
+	font-size: 14px;
+	width: 80%;
+	margin-left: 125px;
+
+}
+
+#profiletable thead {
+	background-color: #D8D8D8;
+}
+
+.greyspace {
+
+	background-color: #F4F4F4;
+	height: 250px;
+    width: 100%;
+
+}
+
+.userinfo {
+
+	display: block;
+}
+
+
+
+
+
+
+
+
 
 
 
