@@ -25,7 +25,6 @@ const express = require("express"),
 require ('dotenv').load()
 app.set("view engine", "pug")
 var WEBPORT = env.WEBPORT
-console.log(env.WEBPORT)
 app.use(bodyParser.urlencoded({extended:true}))// 
 app.use(express.static(path.join(__dirname, 'public'))); // to give app.js access to images on server
 
@@ -56,7 +55,6 @@ db.sequelize.sync({
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
 	console.log('Running on', WEBPORT)
-
 	})
 })
 

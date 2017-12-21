@@ -5,7 +5,7 @@ module.exports = (app, db, upload, path, fs) => {
 	})
 		app.post('/uploaditem', upload.single("file"), function(req, res) {
 
- 	console.log(req.file)
+ 		console.log(req)
     // ...
 
 		
