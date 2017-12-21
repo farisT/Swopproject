@@ -50,6 +50,11 @@ module.exports = (sequelize, DataTypes) => {
                 unique: false,
                 allowNull: false,
                 values: ['New', 'Good as new', 'Used']
+            }, 
+            image: {
+                type: DataTypes.STRING,
+                unique: false,
+                allowNull: false
             }
         })
 return Clothes;
