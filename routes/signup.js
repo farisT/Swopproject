@@ -1,7 +1,7 @@
 module.exports = (app, db, bcrypt) => {
-    app.get('/signUp', function(req, res) {
+    app.get('/signup', function(req, res) {
         if (!req.session.user) {
-            res.render("signUp", {
+            res.render("signup", {
                 isLoggedIn: true
             })
         } else {
@@ -21,7 +21,7 @@ module.exports = (app, db, bcrypt) => {
                             first_name: `${req.body.firstname}`,
                             last_name: `${req.body.lastname}`,
                             email: `${req.body.email}`,
-                            subscription: `simple_shopper`, // WORK OUT HOW TO FIX THIS
+                            subscription: `${req.body.subscription}`,
                             address: `${req.body.address}`,
                             zip_code: `${req.body.zipcode}`,
                             city: `${req.body.city}`,
@@ -30,8 +30,11 @@ module.exports = (app, db, bcrypt) => {
                             password: `${hash}`
                         })
                         .then((result) => {
-                            console.log("SIGN UP SUCCESSFUL: @FARIS AND PATRICIA WHERE DO WE REDIRECT TO NOW?")
-                        	res.send('worked')
+							req.session.user = {name: req.body.firstname}
+							
+							res.render("profile", {
+							user: req.session.user.name
+							})
                         })
                         .catch(e => {
                             console.log("The error: ", e)

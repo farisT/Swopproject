@@ -13,29 +13,32 @@ module.exports = (app, db, bcrypt) => {
     		}
 		})
 		.then((result)=> {
-			console.log(result[0].dataValues.email, result[0].dataValues.password)
-        	if (!result[0].dataValues.password) {
+			console.log(result)
+        	if (!result[0].dataValues.email) {
+        		res.render("login", {
+        			errorLogin: "Email address not found: please sign up"
+        		})
        		 } else {
 				bcrypt.compare(req.body.password, result[0].dataValues.password).then(function(result){
 					if (result == true) {
-						res.send("bcrypt compare worked")
-						// req.session.user = {name: req.body.firstname}
-						// res.render("profile", {
-						// user: req.session.user.name,
-						// isLoggedIn: true,
-						// title: "Profile"})
+						req.session.user = {name: result[0].dataValues.first_name}
+						res.render("profile", {
+						user: req.session.user.name
+						})
+					} else if (result == false ) {
+						console.log("nah m8")
+						res.render("login", {
+           					errorLogin: "Incorrect password and email address combination: please try again"
+						})
 					} else {
-						res.send("bcrypt failed")
-						// res.render("/", {
-      //      					isLoggedIn: true,
-      //      					title: "Homepage"
-						// })
+						console.log("failed @ end")
+						res.end()
 					}
 				})
 				}
 	 		})
 	 	.catch((e) => {
        	 console.log(e)
-		    })
+		})
 	})
 }
