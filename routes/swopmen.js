@@ -14,7 +14,10 @@ module.exports = (app, db) => {
 			.catch((e) => {
 			console.log(e)
 				})
+		else{
 
+			res.render("swopmen")
+		}
 		}
 	})
 }
