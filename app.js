@@ -52,7 +52,7 @@ require("./routes/uploadpage.js")(app,db,upload, path, fs)
 
 
 db.sequelize.sync({ 
-    force: false, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
+    force: true, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
     logging: console.log 
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{
