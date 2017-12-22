@@ -58,7 +58,7 @@ p{
 	color: white;
 	border: solid 1px #5F5F5F;
 	height: 50px;
-	width: 125px;
+	width: auto;
 	font-family: Helvetica;
 	font-size: 22px;
 
@@ -66,7 +66,7 @@ p{
 
 
 
-/* NAVIGATION BAR*/
+/* NAV BAR*/
 .navbarspacing{
 	height: 150px;
 }
@@ -100,11 +100,15 @@ p{
 .navA{
 	margin-right: 25px;
 	text-align: center;
-	margin-right: 20px;
 	font-family: Helvetica;
 	color: #5F5F5F;
 	font-size: 22px;
 	font-weight: 500;
+}
+
+li #navProfile{
+	display: inline-block;
+	border-right: solid 1px #5F5F5F;
 }
 
 #howitworks{
@@ -129,6 +133,13 @@ p{
 	background-color: white;
 	margin: 0 auto;
 }
+
+#profileIcon{
+	height: 50px;
+	width: auto;
+	padding-left: 15px;
+}
+
 .glyphicon {
 	height: 50%;
 	width: auto;
@@ -643,44 +654,46 @@ width: 65%
 }
 
 /*PROFILE PAGE*/
-
-
-#profiletabs {
-
-	float:right;
-	padding-top:190px;
-
+.greyspace {
+	background-color: #F4F4F4;
+	height: 250px;
+    width: 100%;
 }
 
-#profiletabs li {
+#Profilepic{
+	height: 80%;
+	width: auto;
+	margin-top: 7%;
+}
 
+.profiletext{
+	font-weight: bold;
+}
+
+#divProfile{
+	height: 250px;
+	position: relative;
+}
+
+#profiletabs {
 	background-color: #D8D8D8;
+	float:right;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+
 }
 
 #profiletable {
-
 	font-family: Helvetica;
 	font-size: 14px;
-	width: 80%;
+	/*width: 80%;
 	margin-left: 125px;
-
+*/
 }
 
 #profiletable thead {
 	background-color: #D8D8D8;
-}
-
-.greyspace {
-
-	background-color: #F4F4F4;
-	height: 250px;
-    width: 100%;
-
-}
-
-.userinfo {
-
-	display: block;
 }
 
 

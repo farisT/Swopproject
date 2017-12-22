@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt')
 	app.get("/login", (req, res) => {
 		if (req.session.user) { // already logged in so no need to login > index page rendered
 			res.render("index", {
-				user: req.session.user.name
+				first_name: req.session.user.first_name
 			})
 		} else {
 			res.render("login",{
@@ -20,7 +20,7 @@ var bcrypt = require('bcrypt')
 			}
 		})
 		.then((result)=> {
-			console.log("result=", result)
+			console.log("result loginRoute=", result)
 			console.log("result.length", result.length)
 			// console.log("result[0].dataValues.password = ", result[0].dataValues.password)
 			// console.log("result[0].dataValues.first_name = ", result[0].dataValues.first_name)
@@ -31,16 +31,38 @@ var bcrypt = require('bcrypt')
 				})
 			}
 			else if (result.length >= 1) { // if email does exist in database > password check
-				var hashedPassword = result[0].dataValues.password
-				var firstNameUser = result[0].dataValues.first_name
-				console.log("firstnameuser = ", firstNameUser)
-				bcrypt.compare(req.body.password, hashedPassword).then(function(result){
+				var userinfo = {
+					id: result[0].dataValues.id,
+					first_name: result[0].dataValues.first_name,
+					last_name: result[0].dataValues.last_name,
+					email: result[0].dataValues.email,
+					subscription: result[0].dataValues.subscription,
+					address: result[0].dataValues.address,
+					zip_code: result[0].dataValues.zip_code,
+					city: result[0].dataValues.city,
+					phone_number: result[0].phone_number,
+					date_of_birth: result[0].date_of_birth,
+					hashedPassword: result[0].dataValues.password,
+				}
+
+				console.log(userinfo)
+				bcrypt.compare(req.body.password, userinfo.hashedPassword).then(function(result){
 					console.log(result)
 					if (result == true) { // if password is correct > go to profile page
-						req.session.user = {name: firstNameUser}
-						if(req.session.user.name){
+						req.session.user = userinfo
+						if(req.session.user.first_name){
 							res.render("profile", {
-								user: req.session.user.name
+								id: req.session.user.id,
+								first_name: req.session.user.first_name,
+								last_name: req.session.user.last_name,
+								email: req.session.user.email,
+								subscription: req.session.subscription,
+								address: req.session.user.address,
+								zip_code: req.session.user.zip_code,
+								city: req.session.user.city,
+								phone_number: req.session.user.phone_number,
+								date_of_birth: req.session.user.date_of_birth,
+								hashedPassword: req.session.user.hashedPassword,
 							})
 						}
 					} 

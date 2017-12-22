@@ -45,14 +45,14 @@ require("./routes/aboutswop.js")(app, db)
 require("./routes/howitworks.js")(app, db)
 require("./routes/subscription.js")(app)
 require("./routes/signup.js")(app, db, bcrypt)
-require("./routes/login.js")(app, db)
+require("./routes/login.js")(app, db, bcrypt)
 require("./routes/logout.js")(app, db)
 require("./routes/profile.js")(app,db)
-require("./routes/uploaditem.js")(app,db,upload, path, fs)
+require("./routes/uploadpage.js")(app,db,upload, path, fs)
 
 
 db.sequelize.sync({ 
-    force: true, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
+    force: false, // CHANGE THIS TO FALSE WHEN HOSTING - WILL OTHERWISE DELETE ALL DATA WHEN RESTARTING THE APP ! ! ! ! ! ! ! ! ! !! ! ! ! ! ! ! !! ! 
     logging: console.log 
 }).then(()=> {
 	app.listen(WEBPORT, ()=>{

@@ -8,47 +8,67 @@ html
 	body(id="profilePage")
 		include nav
 
-	
+		div(class="container")
+			div(class="row")
+				div(class="col-sm-12")
+					div(class="row greyspace")
+						div(class="col-sm-2 col-sm-offset-1 ")
+							img#Profilepic(src="/images/navbar/profileIcon.png")
+						div(class="col-sm-3")
+							br
+							br
+							h3(class="profiletext") #{first_name } #{last_name}
+							p(class="profiletext") #{email} #[br] #{address} #[br] #{zipcode } #{city} #[br] #{phone_number} #[br] #{date_of_birth}
+						div(class="col-sm-5" id="divProfile")
+							ul.nav.nav-tabs(id="profiletabs")
+								li.active
+									a(href='#') My Products
 
-		div.greyspace
-			h4 Anna Williams
-			p.userinfo Anna Williams
+								li
+									a(href='#') Borrowed (n/a yet)
+								li
+									a(href='#') Favourites (n/a yet)
+
+			div(class="row")
+				br
+				br
+				div(class="col-sm-1 col-sm-offset-1")
+					form(method="GET" action="/uploadpageRoute")
+						input(class="submitelement" id="" type="submit" value="Upload item >")
+					br
+					
 
 
-			ul.nav.nav-tabs(id="profiletabs")
-				li.active
-					a(href='#') My Products
+			div(class="row")
+				div(class="col-sm-10 col-sm-offset-1")
+					table.table(id="profiletable")
+						thead
+							tr
+								th Date Added
+								th (Images Column)
+								th Category
+								th Size
+								th Gender
+								th Brand
+								th State
+								th Borrow time
+								th Status
+						tbody
+							tr.example
+								td 24/11/2017
+								td (IMG HERE)
+								td Trousers
+								td L
+								td Male
+								td Dockers
+								td Good as new
+								td 3 months
+								td (GLYPHICON)
+						
 
-				li
-					a(href='#') Borrowed
-				li
-					a(href='#') Favourites
+		
 
-		.spacer100
-
-		table.table(id="profiletable")
-			thead
-				tr
-					th Date Added
-					th (Images Column)
-					th Category
-					th Size
-					th Gender
-					th Brand
-					th State
-					th Borrow time
-					th Status
-			tbody
-				tr.example
-					td 24/11/2017
-					td (IMG HERE)
-					td Trousers
-					td L
-					td Male
-					td Dockers
-					td Good as new
-					td 3 months
-					td (GLYPHICON)
+		
 
 
 

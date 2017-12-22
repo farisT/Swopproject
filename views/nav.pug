@@ -13,7 +13,7 @@ html
 						img#logo(src="/images/navbar/swoplogo.png")
 
 
-					if(user)
+					if(first_name)
 						ul(class="nav navbar-nav navbar-right")
 							li
 								a(class="navA" href="/swopwomen") Swop Women 
@@ -23,10 +23,13 @@ html
 								a(class="navA" href="/aboutswop") About
 							li
 								a(class="navA" id="howitworks" href="/howitworks") How it works
+
 							li
-								a(class="navA" href="/profile") Profile
-							li
-								a(class="navA" href="/uploaditem") Upload
+								img#profileIcon(src="/images/navbar/profileIcon.png")
+								a(class="navA" id="navProfile" href="/profile") #{first_name}
+
+							//- li
+							//- 	a(class="navA" href="/uploadpage") Upload
 									
 
 							li
