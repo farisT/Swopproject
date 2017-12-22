@@ -1,13 +1,20 @@
 module.exports = (app, db) => {
 	app.get('/swopmen', (req, res) => {
 		if(req.session.user){
-			res.render('swopmen', {
-				first_name: req.session.user.first_name
+
+		db.clothes.findAll({
+			where: {
+			gender: "Men"
+			}
+		})
+		.then((result)=> {
+			console.log(result)
+				res.render("swopmen", {overviewArray: result ,first_name: req.session.user.first_name})
 			})
-		}
-		else {
-			res.render('swopmen')
+			.catch((e) => {
+			console.log(e)
+				})
+
 		}
 	})
 }
-
