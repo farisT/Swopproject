@@ -8,23 +8,13 @@ module.exports = (app, db) => {
 			}
 		})
 		.then((result)=> {
-
 			console.log(result)
-		})
-		.catch((e) => {
+				res.render("swopmen", {overviewArray: result ,first_name: req.session.user.first_name})
+			})
+			.catch((e) => {
 			console.log(e)
-		})
+				})
 
-
-		res.send("it worked!")
-
-			// res.render('swopmen', {
-			// 	first_name: req.session.user.first_name
-			// })
-		}
-		else {
-			res.render('swopmen')
 		}
 	})
 }
-
