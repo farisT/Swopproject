@@ -689,7 +689,46 @@ width: 65%
 	background-color: #D8D8D8;
 }
 
+/*SWOP WOMEN/MEN PAGE (SAME STRUCTURE)*/
 
+.titleCategories{
+	font-family: Helvetica;
+	font-size: 18px;
+	color: #5F5F5F;
+	font-weight: 500;
+	
+	margin-right: 5px;
+}
+
+.divSwopItem{
+	border: solid 1px #5F5F5F;
+	text-align: center;
+	margin-right: 3px;
+}
+.imgOverviewPage{
+	width: 100%;
+}
+
+.textOverviewPage{
+	max-width: 100%;
+	margin: 5px;
+	border-top: solid 1px #5F5F5F;;
+}
+
+#selectedCategory {
+	border: solid 2px #5C715F;
+}
+
+.categoriesText{
+	font-family: Helvetica;
+	font-size: 18px;
+	color: #5F5F5F;
+	font-weight: 500;
+}
+
+.spacerCategories{
+	margin-top: 10px;
+}
 
 
 

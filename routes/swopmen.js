@@ -16,7 +16,7 @@ module.exports = (app, db) => {
 		})
 
 
-		res.send("it worked!")
+		res.render("swopmen")
 
 			// res.render('swopmen', {
 			// 	first_name: req.session.user.first_name
