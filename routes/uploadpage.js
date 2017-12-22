@@ -31,7 +31,7 @@ module.exports = (app, db, upload, path, fs) => {
 				condition: `${req.body.buttonCondition}`,
 				user_id: `${req.session.user.id}`
 			})
-			res.render("profile" , {
+			res.redirect("profile" , {
 				id: req.session.user.id,
 				first_name: req.session.user.first_name,
 				last_name: req.session.user.last_name,
@@ -43,7 +43,7 @@ module.exports = (app, db, upload, path, fs) => {
 				phone_number: req.session.user.phone_number,
 				date_of_birth: req.session.user.date_of_birth,
 				hashedPassword: req.session.user.hashedPassword
-		})
+		}, 301)
 			} else {
 			res.render("index")
 		}

@@ -20,11 +20,6 @@ var bcrypt = require('bcrypt')
 			}
 		})
 		.then((result)=> {
-			console.log("result loginRoute=", result)
-			console.log("result.length", result.length)
-			// console.log("result[0].dataValues.password = ", result[0].dataValues.password)
-			// console.log("result[0].dataValues.first_name = ", result[0].dataValues.first_name)
-			// console.log("result of req.body.password", req.body.password)
 			if (result.length <= 0) { // so if email doesn't exist in database
 				res.render("login", {
 					errorLoginEmail: "Email address not found"
@@ -51,23 +46,10 @@ var bcrypt = require('bcrypt')
 					if (result == true) { // if password is correct > go to profile page
 						req.session.user = userinfo
 						if(req.session.user.first_name){
-							res.render("profile", {
-								id: req.session.user.id,
-								first_name: req.session.user.first_name,
-								last_name: req.session.user.last_name,
-								email: req.session.user.email,
-								subscription: req.session.subscription,
-								address: req.session.user.address,
-								zip_code: req.session.user.zip_code,
-								city: req.session.user.city,
-								phone_number: req.session.user.phone_number,
-								date_of_birth: req.session.user.date_of_birth,
-								hashedPassword: req.session.user.hashedPassword,
-							})
+							res.redirect("/profile", 301)
 						}
 					} 
 					else {
-						console.log("nah m8 password incorrect")
 						res.render("login", {
 							errorLoginPassword: "Incorrect password and email combination: please try again"
 						})
