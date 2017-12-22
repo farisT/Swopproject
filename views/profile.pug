@@ -24,52 +24,60 @@ html
 								li.active
 									a(href='#') My Products
 
-								li
-									a(href='#') Borrowed (n/a yet)
-								li
-									a(href='#') Favourites (n/a yet)
+								//- li
+								//- 	a(href='#') Borrowed (n/a yet)
+								//- li
+								//- 	a(href='#') Favourites (n/a yet)
 
-				div(class="row")
+			div(class="row")
 				br
 				br
-				div(class="col-sm-1 col-sm-offset-1")
+				div(class="col-sm-3 col-sm-offset-1 uploadsign")
 					form(method="GET" action="/uploadpageRoute")
 						input(class="submitelement" id="" type="submit" value="Upload item >")
 					br
-				div(class="row")
-					div(class="col-sm-10 col-sm-offset-1")
-						table.table(id="profiletable")
-							thead
-								tr
-									th Date Added
-									th Item
-									th Category
-									th Size
-									th Gender
-									th Brand
-									th State
-									th Borrow time
+					h1.titleFont MY ITEMS
+			div(class="row")
+				div(class="col-sm-10 col-sm-offset-1")
+					div(class="row table" id="profiletable")
+						div(class="col-sm-2 profiletitletext")
+							th Date Added
+						div(class="col-sm-2 profiletitletext")
+							th Item
+						div(class="col-sm-1 profiletitletext")
+							th Category
+						div(class="col-sm-1 profiletitletext")
+							th Size
+						div(class="col-sm-1 profiletitletext")
+							th Gender
+						div(class="col-sm-1 profiletitletext")
+							th Brand
+						div(class="col-sm-2 profiletitletext")
+							th State
+						div(class="col-sm-2 profiletitletext")
+							th Borrow time											
 
-				div(class="row")
-					div(class="col-sm-10 col-sm-offset-1")
+			div(class="row")
+				div(class="col-sm-10 col-sm-offset-1")
+					each item in clothes
 						div(class="row")
-							each item in clothes 
-								div(class="col-sm-2")
-									p #{item.dataValues.created_at}
-								div(class="col-sm-4")
-									img(src="images/uploaditem/"+item.dataValues.itemimage)
-								div(class="col-sm-1")
-									p #{item.dataValues.category}
-								div(class="col-sm-1")
-									p #{item.dataValues.size}
-								div(class="col-sm-1")
-									p #{item.dataValues.gender}
-								div(class="col-sm-1")
-									p #{item.dataValues.brand}
-								div(class="col-sm-1")
-									p #{item.dataValues.condition}
-								div(class="col-sm-1")
-									p #{item.dataValues.borrow_time}
+							div(class="col-sm-2 profiletitletext")
+								p.profiletitletext #{item.dataValues.created_at}
+							div(class="col-sm-2 profiletitletext")
+								img.ProfileItemImage(src="images/uploaditem/"+item.dataValues.itemimage)
+							div(class="col-sm-1 profiletitletext")
+								p.profiletitletext #{item.dataValues.category}
+							div(class="col-sm-1 profiletitletext")
+								p.profiletitletext #{item.dataValues.size}
+							div(class="col-sm-1 profiletitletext")
+								p.profiletitletext #{item.dataValues.gender}
+							div(class="col-sm-1 profiletitletext")
+								p.profiletitletext #{item.dataValues.brand}
+							div(class="col-sm-2 profiletitletext")
+								p.profiletitletext #{item.dataValues.condition}
+							div(class="col-sm-2 profiletitletext")
+								p.profiletitletext #{item.dataValues.borrow_time}
+						hr
 
 
 

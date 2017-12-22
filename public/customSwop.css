@@ -668,20 +668,30 @@ width: 65%
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
-
 }
 
 #profiletable {
+	background-color: #D8D8D8;
 	font-family: Helvetica;
 	font-size: 14px;
-	/*width: 80%;
-	margin-left: 125px;
-*/
+	vertical-align: center;
+	
 }
 
-#profiletable thead {
-	background-color: #D8D8D8;
+.profiletitletext{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	vertical-align: center;
+	padding: 0px;
 }
+
+.ProfileItemImage{
+	width: 150px;
+	height: 200px;
+}
+
+
+
 
 /*SWOP WOMEN/MEN PAGE (SAME STRUCTURE)*/
 
@@ -714,7 +724,7 @@ width: 65%
 	text-align: center;
 	margin-right: 3px;
 	padding: 0px;
-	height: 330px;
+	height: 300px;
 	position: relative;
 	width: 200px;
 }
@@ -731,7 +741,7 @@ width: 65%
 .imgOverviewPage{
 	width: 100%;
 	max-width: 100%;
-	height: 300px;
+	height: 265px;
 }
 
 .subDivTextOverview{
@@ -748,6 +758,10 @@ width: 65%
 	text-align: center;
 	margin: 0, auto;
 	max-width: 100%;
+}
+
+.uploadsign{
+	padding: 0;
 }
 
 
