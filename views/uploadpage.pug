@@ -18,9 +18,9 @@ html
 						div(class="row")
 							div(class="col-sm-4")
 								img#iconUpload(src="images/uploadPage/uploadIcon.png")
-								input(type="file" name="file" id="file")
+								input(type="file" name="file" id="file" accept=".jpg, .jpeg, .png" required)
 							div(class="col-sm-7 col-sm-offset-1")
-								select(class="form-control" required)
+								select(name ="categories" class="form-control" required)
 									option(value="" disabled selected) Categories*
 									option(value="Coats & Jackets") Coats and Jackets
 									option(value="Hoodies") Hoodies
@@ -35,7 +35,7 @@ html
 									option(value="Jumpsuits") Jumpsuits
 									option(value="Accessories") Accessories
 
-								select(class="form-control" required)
+								select(name ="size" class="form-control" required)
 									option(value="" disabled selected) Size*
 									option(value="XS") XS
 									option(value="S") S
@@ -44,30 +44,31 @@ html
 									option(value="XL") XL
 						div(class='row')
 							div(class="col-sm-4")
-								input(id="uploadbuttons" class="form-control" type="button" value="Women" required)
+								input(id="selectedGender" class="form-control buttonGender" type="button" value="Women" required)
 							div(class='col-sm-4')
-								input(id="uploadbuttons" class="form-control" type="button" value="Men" required)
+								input(class="form-control buttonGender" type="button" value="Men" required)
+								input(type="hidden" id="genderType" name="buttonGender")
 
-
-						input(class="form-control" type="text" placeholder="Brand")
-						select(class="form-control" required)
+						input(name ="brand" class="form-control" type="text" placeholder="Brand")
+						select(name ="borrowTime" class="form-control" required)
 									option(value="" disabled selected) Borrow time*
-									option(value="3") 3 months
-									option(value="4") 4 months
-									option(value="5") 5 months
-									option(value="6") 6 months
-									option(value=">6") More than 6 months
-						input(class="form-control" type="text" placeholder="comments")
+									option(value="3 months") 3 months
+									option(value="4 months") 4 months
+									option(value="5 months") 5 months
+									option(value="6 months") 6 months
+									option(value="> 6 months") More than 6 months
+						input(name ="comments" class="form-control" type="text" placeholder="comments")
 
 						div(class='row')
 							div(class="col-sm-4")
-								input(class="form-control" type="button" value="New" required)
+								input(class="form-control buttonCondition" id="selectedCondition" type="button" value="New" required)
 							div(class='col-sm-4')
-								input(class="form-control" type="button" value="Good as new" required)
+								input(class="form-control buttonCondition" type="button" value="Good as new" required)
 							div(class="col-sm-4")
-								input(class="form-control" type="button" value="Used" required)
-
-						input(type="submit" name="submit" id="submit" value="Send " class="btn btn-default")
+								input(class="form-control buttonCondition" type="button" value="Used" required)
+								input(type="hidden" id="conditionType" name="buttonCondition")
+						
+						input(type="submit" name="submit" id="submit" value="Upload >" class="btn btn-default")
 
 				div(class="col-sm-4" id="parentDiv2Upload")
 					img#uploadBackgrPhoto(src="/images/uploadPage/backgrUploaditem.png")
@@ -90,17 +91,36 @@ html
 
 	script.
 		$(document).ready(function(){
-
-			$(".form-control").click(function(){
-			$(".form-control").removeAttr("id", "uploadbuttons")
-			$(this).attr('id', 'uploadbuttons')
-
-				})
+			var gender = "Women"
+			var condition = "New"
+			$(".buttonGender").click(function(){
+			$(".buttonGender").removeAttr("id", "selectedGender")
+			$(this).attr('id', 'selectedGender')
+			gender = $("#selectedGender").attr("value")
+			$("#genderType").attr("value", gender)
 			})
-		//- $("#uploadbuttons").click(function(){
-		//- 	$('#uploadbuttons').focus({
-		//- 		'background-color': '#5C715F',
-		//- 		'color': 'white',
 
-		//- 			 });
-		//- 			});
+			$(".buttonCondition").click(function(){
+			$(".buttonCondition").removeAttr("id", "selectedCondition")
+			$(this).attr('id', 'selectedCondition')
+			condition = $("#selectedCondition").attr("value")
+			$("#conditionType").attr("value", condition)
+			})
+		})
+
+
+
+
+	/////////
+	script.
+		$(document).ready(function(){
+			var subscription = "super_swopper"
+			$(".subscripColumn").click(function(){
+				$(".subscripColumn").removeAttr("id", "selectedSubscription")
+				$(this).attr('id', 'selectedSubscription')
+				subscription = $("#selectedSubscription").attr("value")
+				$("#subscriptionType").attr("value", subscription)
+			})
+		})
+		
+input(type="hidden" id="subscriptionType" name="button")

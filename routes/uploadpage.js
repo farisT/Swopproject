@@ -12,17 +12,24 @@ module.exports = (app, db, upload, path, fs) => {
 
 		app.post('/uploaditem', upload.single("file"), function(req, res) {
 			console.log(req.file)
+			console.log(req.body.categories)
+			console.log(req.body.size)
+			console.log(req.body.buttonGender)
+			console.log(req.body.brand)
+			console.log(req.body.borrowTime)
+			console.log(req.body.comments)
+			console.log(req.body.buttonCondition)
 			db.clothes.create({
-				category: `${req.body.category}`,
+				itemimage: `${req.file.filename}`,
+				category: `${req.body.categories}`,
 				size: `${req.body.size}`,
-				gender: `${req.body.gender}`,
+				gender: `${req.body.buttonGender}`,
 				brand: `${req.body.brand}`,
-				borrow_time: `${req.body.borrowtime}`,
+				borrow_time: `${req.body.borrowTime}`,
 				comments: `${req.body.comments}`,
-				condition: `${req.body.condition}`,
-				image: `${req.file.filename}`,
+				condition: `${req.body.buttonCondition}`,
 			})
-		res.send("your file has been uploaded!")
+		res.send("your item has been uploaded!")
 	})
 }
 

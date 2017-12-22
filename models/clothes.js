@@ -1,10 +1,15 @@
 module.exports = (sequelize, DataTypes) => {
     var Clothes = sequelize.define('clothes', {
+            itemimage: {
+                type: DataTypes.STRING,
+                unique: false,
+                allowNull: false
+            },
             category: {
                 type: DataTypes.STRING,
                 unique: false,
                 allowNull: false,
-                values: ['Coats&Jackets', 'Hoodies', 'Sweatshirts', 'Cardigans', 'Jeans', 'Trousers', 'Skirts', 'Shorts', 'Suits', 'Dresses', 'Jumpsuits', 'Accessories']
+                values: ['Coats & Jackets', 'Hoodies', 'Sweatshirts', 'Cardigans', 'Jeans', 'Trousers', 'Skirts', 'Shorts', 'Suits', 'Dresses', 'Jumpsuits', 'Accessories']
             },
             size: {
                 type: DataTypes.STRING,
@@ -16,22 +21,22 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 unique: false,
                 allowNull: false,
-                values: ['Man', 'Woman']
+                values: ['Men', 'Women']
             },
             brand: {
                 type: DataTypes.STRING,
                 unique: false,
                 allowNull: false,
                 validate: {
-                    startsWithUpper: function(bodyval, Error) {
-                        var first = bodyVal.charAt(0)
-                        var startsWithUpper = first === first.toUpperCase()
-                        if (!startsWithUpper) {
-                            throw new Error('first letter must be uppercase')
-                        } else {
-                            console.log(" ")
-                        }
-                    }
+                    // startsWithUpper: function(bodyval, Error) {
+                    //     var first = bodyVal.charAt(0)
+                    //     var startsWithUpper = first === first.toUpperCase()
+                    //     if (!startsWithUpper) {
+                    //         throw new Error('first letter must be uppercase')
+                    //     } else {
+                    //         console.log(" ")
+                    //     }
+                    // }
                 }
             },
             borrow_time: {
@@ -51,11 +56,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 values: ['New', 'Good as new', 'Used']
             }, 
-            image: {
-                type: DataTypes.STRING,
-                unique: false,
-                allowNull: false
-            }
+
         })
 return Clothes;
 }

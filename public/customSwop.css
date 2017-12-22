@@ -505,18 +505,11 @@ div.rowAbout {
 
 
 
-#uploaditemPage #uploadbuttons {
+#selectedCondition, #selectedGender {
 
 	background-color: #5C715F;
 	color: white;
 }
-
-/*#uploaditemPage #uploadbuttons2:focus {
-
-	
-	background-color: #5C715F;
-	color: white;
-}*/
 
 
 #parentDiv1Upload {
