@@ -28,6 +28,7 @@ module.exports = (app, db, upload, path, fs) => {
 				borrow_time: `${req.body.borrowTime}`,
 				comments: `${req.body.comments}`,
 				condition: `${req.body.buttonCondition}`,
+				user_id: `${req.sessions.user.id}`
 			})
 		res.render("profile" , {
 			id: req.session.user.id,

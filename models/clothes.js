@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+ module.exports = (sequelize, DataTypes) => {
     var Clothes = sequelize.define('clothes', {
             itemimage: {
                 type: DataTypes.STRING,
