@@ -47,9 +47,9 @@ html
 								input(id="selectedGender" class="form-control buttonGender" type="button" value="Women" required)
 							div(class='col-sm-4')
 								input(class="form-control buttonGender" type="button" value="Men" required)
-								input(type="hidden" id="genderType" name="buttonGender")
+								input(type="hidden" id="genderType" name="buttonGender" value="Women")
 
-						input(name ="brand" class="form-control" type="text" placeholder="Brand")
+						input(name ="brand" class="form-control" type="text" placeholder="Brand" required)
 						select(name ="borrowTime" class="form-control" required)
 									option(value="" disabled selected) Borrow time*
 									option(value="3 months") 3 months
@@ -66,7 +66,7 @@ html
 								input(class="form-control buttonCondition" type="button" value="Good as new" required)
 							div(class="col-sm-4")
 								input(class="form-control buttonCondition" type="button" value="Used" required)
-								input(type="hidden" id="conditionType" name="buttonCondition")
+								input(type="hidden" id="conditionType" name="buttonCondition" value="New")
 						
 						input(type="submit" name="submit" id="submit" value="Upload >" class="btn btn-default")
 
@@ -97,6 +97,7 @@ html
 			$(".buttonGender").removeAttr("id", "selectedGender")
 			$(this).attr('id', 'selectedGender')
 			gender = $("#selectedGender").attr("value")
+			$("#genderType").removeAttr("value")
 			$("#genderType").attr("value", gender)
 			})
 
@@ -104,6 +105,7 @@ html
 			$(".buttonCondition").removeAttr("id", "selectedCondition")
 			$(this).attr('id', 'selectedCondition')
 			condition = $("#selectedCondition").attr("value")
+			$("#conditionType").removeAttr("value")
 			$("#conditionType").attr("value", condition)
 			})
 		})

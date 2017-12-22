@@ -696,23 +696,7 @@ width: 65%
 	font-size: 18px;
 	color: #5F5F5F;
 	font-weight: 500;
-	
 	margin-right: 5px;
-}
-
-.divSwopItem{
-	border: solid 1px #5F5F5F;
-	text-align: center;
-	margin-right: 3px;
-}
-.imgOverviewPage{
-	width: 100%;
-}
-
-.textOverviewPage{
-	max-width: 100%;
-	margin: 5px;
-	border-top: solid 1px #5F5F5F;;
 }
 
 #selectedCategory {
@@ -729,6 +713,49 @@ width: 65%
 .spacerCategories{
 	margin-top: 10px;
 }
+
+/*overview coloums with items to be swopped*/
+.divSwopItem{ 
+	border: solid 2px #5F5F5F;
+	text-align: center;
+	margin-right: 3px;
+	padding: 0px;
+	height: 330px;
+	position: relative;
+	width: 200px;
+}
+
+.subDivImageOverview{
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 0px;
+}
+
+.imgOverviewPage{
+	width: 100%;
+	max-width: 100%;
+	height: 300px;
+}
+
+.subDivTextOverview{
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	margin-left: 10px;
+
+}
+
+.textOverviewPage{
+	margin: 5px;
+	border-top: solid 1px #5F5F5F;
+	text-align: center;
+	margin: 0, auto;
+	max-width: 100%;
+}
+
 
 
 

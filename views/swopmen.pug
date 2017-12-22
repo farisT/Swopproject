@@ -16,7 +16,7 @@ html
 							div(class="row")
 								br
 								div(class="col-sm-2 titleCategories" id="selectedCategory")
-									a(class="categoriesText" href="" ) All
+									a(class="categoriesText" href="/swopmen" ) All
 								div(class="col-sm-2 titleCategories")
 									a(class="categoriesText" href="") Suits
 								div(class="col-sm-2 titleCategories")
@@ -38,19 +38,18 @@ html
 									a(class="categoriesText" href="") Shorts
 								div(class="col-sm-2 titleCategories")
 									a(class="categoriesText" href="") Accessoires
+
 			br
 			div(class="row")
 				div(class="col-sm-10 col-sm-offset-1")
 					div(class="row")
-						//- each item in OBJECT WITH UPLOADED ITEMS
-						//- 	div(class="col-sm-2 divSwopItem")
-						//- 		img.imgOverviewPage(src="/images/uploaditem/#{item.XXXXX}")
-						//- 		p #{item.XXXXBRAND} - #{item.XXXXSIZE}
-
-
-					//- div(class="col-sm-2 divSwopItem")
-						//- 	img.imgOverviewPage(src="/images/uploaditem/1513936070295.png")
-						//- 	p.textOverviewPage H&M - Size M
+						each item in overviewArray
+							div(class="col-sm-2 divSwopItem")
+								div(class="row")
+									div(class="col-sm-12 subDivImageOverview")
+										img.imgOverviewPage(src="images/uploaditem/"+item.dataValues.itemimage)
+									div(class="col-sm-12 subDivTextOverview")
+										p.textOverviewPage #{item.dataValues.brand} - #{item.dataValues.size}
 
 
 
