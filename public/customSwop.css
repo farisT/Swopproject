@@ -522,6 +522,7 @@ div.rowAbout {
 
 	background-color: #ECECEC;
 	position: relative;
+	height: 550px;
 }
 
 
@@ -573,7 +574,7 @@ div.rowHow {
 
 #underlisttext {
 
-    margin-top: 365px;
+    margin-top: 345px;
     padding-left: 50px;
 
 }
@@ -604,42 +605,35 @@ width: 65%
 #hiwsteps {
 
 	margin-top: 0;
-    float: left;
-    display: inline-table;
     list-style: none;
     font-size: 18px;
     font-family: Helvetica;
-    padding-left: 90px;
     color: #86A08D;
 }
 
 #hiwtext {
 
 	margin-top: 0;
-    float: left;
-    display: inline;
     list-style: none;
     font-size: 12px;
     font-family: Helvetica;
-    padding-left: 50px;
-    width: 50%;
-    padding-top: 40px;
 
+    width: 30%;
+
+
+}
+
+#hiwtext li {
+
+	padding-top: 30px;
+	width:500px;
 }
 
 #hiwsteps li {
 
-	padding-top: 40px;
+	padding-top: 35px;
 }
 
-.paraspace2 {
-	margin-top: 20px;
-}
-
-.paraspace {
-
-	margin-top: 23px;
-}
 
 .center {
 
