@@ -41,8 +41,6 @@ module.exports = (app, db, bcrypt) => {
                             })
                         })
                         .then((createdUser) => {
-                            console.log(createdUser.dataValues.id)
-                            console.log(createdUser.dataValues.city)
                             var userinfo = {
                                     id: createdUser.dataValues.id,
                                     first_name: createdUser.dataValues.first_name,
